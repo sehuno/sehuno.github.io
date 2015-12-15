@@ -1,0 +1,17 @@
+---
+layout: scroll
+title: photography
+---
+<div class="picture-container"> 
+
+	{% for i in (1..7) %}
+
+		<div class="picture-holder">
+			<div class="picture"> 
+				<img src="/img/{{i}}.jpg"></img>
+			</div>
+		</div>
+
+	{% endfor %}
+
+</div>	

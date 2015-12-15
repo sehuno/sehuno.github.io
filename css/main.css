@@ -1,8 +1,80 @@
 body {
+    display:block;
+    font-size: 10px;
+    font-family: Verdana, sans-serif;
+    background: white;
+
+}
+
+.menu {
+    width: 200px;
+    overflow: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    height: 100%;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    margin-top: 25px;
+}
+
+nav li {
+    list-style-type: none;
+    font-size: 14px;
+    font-family: Courier;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: line-through;
+}
+
+.container {
+    height: 100%;
+    top: 0;
+    margin: 0 0 0 200px;
+    background-color: #fff;
+}
+
+.scroll {
+    width:5000px;
+}
+
+.picture-container {
+    height:100%;
+}
+
+.picture-holder {
+    height: 100%;
+}
+
+.picture {
+    float: left;
+    margin-right: 25px;
+}
+
+img {
+    height:500px;
+}
+/*.boxinbox {
+    height:500px;
+}*/
+
+
+/*body {
     margin: 60px auto;
     width: 70%;
-}
-nav ul, footer ul {
+}*/
+/*nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
@@ -41,3 +113,4 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+*/
