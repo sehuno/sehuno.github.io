@@ -40,13 +40,12 @@ a:hover {
 
 .container {
     height: 100%;
-    top: 0;
-    margin: 0 0 0 200px;
+    margin: 50px 0 0 200px;
     background-color: #fff;
 }
 
 .scroll {
-    width:5000px;
+    width:12000px;
 }
 
 .picture-container {
