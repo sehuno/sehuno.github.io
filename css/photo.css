@@ -1,0 +1,25 @@
+body {
+	background: white;
+}
+
+.picture-container {
+	left:0;
+	position: absolute;
+    width:100%;
+	overflow: hidden;
+}
+
+.picture-holder {
+	position: relative;
+	width: 100%;
+	margin-top: 1.5em;
+}
+
+.picture {
+	position: relative;
+	width: 100%;
+}
+
+img {
+    width:100%;
+}
