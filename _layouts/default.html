@@ -4,30 +4,16 @@
 		<head>
 			<title>{{ page.title }}</title>
 			<!-- link to main stylesheet -->
+			<!-- animsition.css -->
+			<link rel="stylesheet" href="/css/animsition.min.css">
+			<!-- jQuery -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+			<!-- animsition.js -->
+			<script src="/js/animsition.min.js"></script>
+			<!-- my css -->
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
-			
 		</head>
 		<body>
-			<div class="menu">
-				<nav>
-					<ul><li><h1 style='font-size: 14px'><a href="/">eric séhun oh</a></li></ul></h1>
-		    		<ul>
-			        	<li><a href="/about">about</a></li>
-			        	<li><a href="/blog">blog</a></li>
-			        	<li><a href="/proj">projects</a></li>
-		        		<li><a href="/photo">photography</a></li>
-		        	<!-- 	<li><a href="/cv">cv</a></li> -->
-		    		</ul>
-				</nav>
-			</div>
-			<div class="container">
-					{{ content }}
-			</div>
-			<!-- <footer>
-	    		<ul>
-	        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-	        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-				</ul>
-			</footer> -->
+			{{ content }}
 		</body>
 	</html>
