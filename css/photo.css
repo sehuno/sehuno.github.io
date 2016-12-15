@@ -28,7 +28,8 @@ img {
 	.picture-container {
 		bottom:0;
 		height:100%;
-		overflow:auto;
+		overflow: auto;
+		overflow-y: hidden;
 		-webkit-overflow-scrolling: touch;
 	}
 
