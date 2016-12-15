@@ -18,6 +18,34 @@ body {
 }
 
 img {
-	margin-top: 0.9vh;
+	margin-bottom: 0.9vh;
     width:100%;
+}
+
+@media screen and (orientation: landscape) {
+	.picture-container {
+		bottom:0;
+		height:100%;
+		overflow:auto;
+	}
+
+	.picture-holder {
+		position: relative;
+		list-style-type:none;
+		display: flex;
+		height:100%;
+		/* width: 1000%; */
+		overflow: hidden;
+	}
+
+	.picture {
+		height: 100%;
+		display: inline-block;
+		margin-right: 2vw;
+	}
+
+	img {
+		height:100%;
+		width: auto;
+	}
 }
