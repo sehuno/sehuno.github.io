@@ -5,21 +5,22 @@ body {
 .picture-container {
 	left:0;
 	position: absolute;
-    width:100%;
+    /*width:100%;*/
 	overflow: hidden;
 }
 
 .picture-holder {
-	position: relative;
-	width: 100%;
-	margin-top: 1.5em;
+	/*position: relative;*/
+	/*width: 100%;*/
+	/*margin-top: 0.9vh;*/
 }
 
 .picture {
-	position: relative;
-	width: 100%;
+	/*position: relative;*/
+	/*width: 100%;*/
 }
 
 img {
+	margin-top: 0.9vh;
     width:100%;
 }
