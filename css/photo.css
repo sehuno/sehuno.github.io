@@ -3,9 +3,11 @@ body {
 }
 
 .picture-container {
+	top:0;
 	left:0;
-	position: absolute;
-    /*width:100%;*/
+    width:100%;
+    position: absolute;
+    /*list-style: none;*/
 	overflow: hidden;
 }
 
@@ -15,10 +17,10 @@ body {
 	/*margin-top: 0.9vh;*/
 }
 
-.picture {
-	/*position: relative;*/
-	/*width: 100%;*/
-}
+/*.picture {
+	position: relative;
+	width: 100%;
+}*/
 
 img {
 	margin-top: 0.9vh;

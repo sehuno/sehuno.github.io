@@ -21,4 +21,7 @@ $(document).ready(function() {
     overlayParentElement : 'body',
     transition: function(url){ window.location.href = url; }
   });
+    // $(".name").click(function (e) {
+    //     $(this).addClass(".shake").siblings().removeClass(".shake");
+    // });
 });
