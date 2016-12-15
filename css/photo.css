@@ -5,19 +5,16 @@ body {
 .picture-container {
 	left:0;
 	position: absolute;
-    /*width:100%;*/
 	overflow: hidden;
 }
 
 .picture-holder {
-	/*position: relative;*/
-	/*width: 100%;*/
-	/*margin-top: 0.9vh;*/
+	list-style-type:none;
+	margin:0;
+	padding:0;
 }
 
 .picture {
-	/*position: relative;*/
-	/*width: 100%;*/
 }
 
 img {
