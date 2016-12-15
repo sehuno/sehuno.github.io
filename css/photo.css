@@ -29,6 +29,7 @@ img {
 		bottom:0;
 		height:100%;
 		overflow:auto;
+		-webkit-overflow-scrolling: touch;
 	}
 
 	.picture-holder {
