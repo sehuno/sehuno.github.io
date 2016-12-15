@@ -4,21 +4,12 @@ title: photography
 ---
 <link rel="stylesheet" type="text/css" href="/css/photo.css">
 <div class="picture-container animsition"> 
-	{% for i in (1..12) %}
-		<div class="picture-holder">
-			<div class="picture"> 
+	<ul class="picture-holder">
+		{% for i in (1..12) %}
+			<li class="picture"> 
 				<img src="/img/i{{i}}.jpg""></img>
-			</div>
-		</div>
-	{% endfor %}
+			</li>
+		{% endfor %}
+	</ul>
 </div>	
-<!-- <ul class="picture-container animsition"> 
-	{% for i in (1..12) %}
-		< class="picture-holder">
-			<div class="picture"> 
-				<img src="/img/i{{i}}.jpg""></img>
-			</div>
-		</>
-	{% endfor %}
-</div>	 -->
 <script src="/js/photo.js"></script>

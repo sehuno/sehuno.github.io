@@ -7,22 +7,45 @@ body {
 	left:0;
     width:100%;
     position: absolute;
-    /*list-style: none;*/
 	overflow: hidden;
 }
 
 .picture-holder {
-	/*position: relative;*/
-	/*width: 100%;*/
-	/*margin-top: 0.9vh;*/
+	list-style-type:none;
+	margin:0;
+	padding:0;
 }
 
-/*.picture {
-	position: relative;
-	width: 100%;
-}*/
+.picture {
+}
 
 img {
-	margin-top: 0.9vh;
+	margin-bottom: 0.9vh;
     width:100%;
+}
+
+@media screen and (orientation: landscape) {
+	.picture-container {
+		bottom:0;
+		height:100%;
+		overflow:auto;
+	}
+
+	.picture-holder {
+		position: relative;
+		list-style-type:none;
+		display: flex;
+		height:100%;
+	}
+
+	.picture {
+		height: 100%;
+		display: inline-block;
+		margin-right: 2vw;
+	}
+
+	img {
+		height:100%;
+		width: auto;
+	}
 }
