@@ -1,0 +1,67 @@
+.sm {
+    position: relative;
+    width:100%;
+}
+
+.sm ul {
+    bottom: -6vh;
+    position: relative;
+}   
+
+.sm ul li {
+    position: relative;
+    list-style: none;
+    margin-right: 5.3vw;
+    display: inline-block;
+}
+
+.sm ul li div object {
+    width:9.5vw;
+}
+
+@media screen and (orientation: landscape) {
+    .name {
+        position: absolute;
+        font-family: "Courier";
+        font-size: 3.5vw;
+        left:4vw;
+        top: 1.5vh;
+    }
+
+    .nav {
+        width: 70%;
+        float: right;
+        position: relative
+    }
+
+    .nav ul {
+        list-style: none;
+        display:inline-block;
+    }
+
+    .nav li a {
+        float: right;
+        font-size: 5vw;
+        margin-top: 4.4vh;
+        font-family: "Courier";
+    }
+   .sm {
+        position: absolute;
+        z-index: -1;
+    }
+
+    .sm ul {
+    }   
+
+    .sm ul li {
+        position: relative;
+        list-style: none;
+        display:block;
+    }
+
+    .sm ul li div object {
+        width:8vh;
+        margin-top: 5vh
+    }
+
+}
