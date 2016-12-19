@@ -1,0 +1,55 @@
+.blog-container {
+	position: absolute;
+	height:100%;
+	width:100%;
+}
+
+.blog-container h1 {
+	position: relative;
+	margin-top: 0;
+	text-align: center;
+	font-size: 15vw;
+	font-family: "Helvetica Neue";
+}
+
+.bp-list {
+	position: relative;
+	list-style: none;
+	float: right;
+	width:100%;
+	-webkit-padding-start: 0px;
+}
+
+.row-right {
+	position: relative;
+	float:right;
+	width:30vw;
+}
+
+.row-right p {
+	font-family: "Courier"; 
+	font-size: 2.5vw;
+	float:right;
+	margin-right: 3vw;
+}
+
+.bp-row {
+	height: 7vh;
+	width:100%;
+	margin-bottom: 1.5vh;
+}
+
+.bp-row a {
+	position: relative;
+	float: right;
+	margin-right: 10vw;
+	text-align: bottom;
+	color: black;
+	font-size: 7vw;
+	font-family: "Courier";
+	text-decoration: none;
+}
+
+.bp-row a:hover {
+	text-decoration: line-through;
+}
