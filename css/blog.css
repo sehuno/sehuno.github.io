@@ -7,6 +7,7 @@
 .blog-container h1 {
 	position: relative;
 	margin-top: 0;
+	margin-bottom: 0.2em;
 	text-align: center;
 	font-size: 15vw;
 	font-family: "Helvetica Neue";
@@ -34,9 +35,10 @@
 }
 
 .bp-row {
-	height: 7vh;
+	/*height:3em; works with ipad*/
+	height: 2.5em;
 	width:100%;
-	margin-bottom: 1.5vh;
+	margin-bottom: 1em;
 }
 
 .bp-row a {

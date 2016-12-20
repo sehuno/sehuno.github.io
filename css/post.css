@@ -1,0 +1,17 @@
+.post-top {
+
+}
+
+.post-top h1 {
+	font-family: "Helvetica Neue";
+}
+
+.post-top p {
+	font-family: "Courier";
+}
+
+.post-body p {
+	font-family: "Slabo 27px";
+	font-size: 5vw;
+	line-height: 140%;
+}
