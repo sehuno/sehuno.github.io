@@ -1,5 +1,41 @@
+.about-container {
+    width: 100%;
+    font-family: "Slabo 27px";
+}
+
+.about-container h1 {
+    font-family: "Helvetica Neue";
+    -webkit-margin-after: 0px;
+}
+
+.text-slide {
+    margin-top: 0vh;
+}
+
+.text-item, .text-item a {
+    position: absolute;
+    font-family: "Neuzeit S W01", "Helvetica Neue";
+    font-weight: 300;
+    /*-webkit-margin-before: 0.5em;*/
+    -webkit-margin-after: 0.5em;    
+}
+
+/*.text-item a {
+    position: relative;
+}*/
+
+.self-blurb {
+    position: relative;
+    margin-top: 10vh;
+}
+
+.self-blurb p {
+    position: relative;
+}
+
 .sm {
     position: relative;
+    margin-top:33vh;
     width:100%;
 }
 
@@ -45,6 +81,7 @@
         margin-top: 4.4vh;
         font-family: "Courier";
     }
+
    .sm {
         position: absolute;
         z-index: -1;
