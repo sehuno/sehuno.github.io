@@ -5,7 +5,7 @@ $(document).ready(function(){
           $('#text-slide :first-child').fadeOut(700)
              .next('.text-item').fadeIn(1100)
              .end().appendTo('#text-slide');}, 
-          4500);
+          3500);
     });
 });
 

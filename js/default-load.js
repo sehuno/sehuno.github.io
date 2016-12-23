@@ -21,7 +21,17 @@ $(document).ready(function() {
     overlayParentElement : 'body',
     transition: function(url){ window.location.href = url; }
   });
-    // $(".name").click(function (e) {
-    //     $(this).addClass(".shake").siblings().removeClass(".shake");
-    // });
+
+    $(".name").click(function() {
+        var classes = ["shake", "jello", "pulse", "flash", "rubberBand", "swing", "bounce", "flipInX", "hinge", "zoomOutLeft", "zoomOutUp", "zoomInLeft", "zoomInDown"];
+        var index = Math.floor(Math.random()*classes.length);
+        console.log(index);
+        $(this).addClass('animated' + " " + classes[index]).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
+            function() {
+                $(this).removeClass('animated' + " " + classes[index]);
+                $('.emoji').removeClass('moveto');
+            }
+        );
+        $('.emoji').addClass('moveto');
+    });
 });

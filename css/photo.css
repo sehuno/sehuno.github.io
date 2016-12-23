@@ -12,11 +12,19 @@ body {
 
 .picture-holder {
 	list-style-type:none;
+	-webkit-margin-after:0;
 	margin:0;
 	padding:0;
 }
 
 .picture {
+}
+
+.photo-blurb {
+	font-size: 0.8em;
+	font-family: "Slabo 27px", "Courier";
+	margin-left: 0.2em;
+	margin-right: 0.2em;
 }
 
 img {
@@ -49,5 +57,18 @@ img {
 	img {
 		height:100%;
 		width: auto;
+	}
+
+	.photo-blurb {
+		/*overflow: scroll;*/
+		height:auto;
+		margin-top: 2vh;
+		margin-left:4vw;
+	}
+
+	.photo-blurb p {
+		font-size: 1em;
+		margin-right: 4vw;
+		width: 92vw;
 	}
 }
