@@ -7,7 +7,6 @@ body {
 	left:0;
     width:100%;
     position: absolute;
-	overflow: hidden;
 }
 
 .picture-holder {
@@ -34,10 +33,9 @@ img {
 
 @media screen and (orientation: landscape) {
 	.picture-container {
-		bottom:0;
-		height:100%;
-		overflow: auto;
+		width: auto;
 		overflow-y: hidden;
+		height:100%;
 		-webkit-overflow-scrolling: touch;
 	}
 
@@ -60,15 +58,15 @@ img {
 	}
 
 	.photo-blurb {
-		/*overflow: scroll;*/
-		height:auto;
-		margin-top: 2vh;
-		margin-left:4vw;
+		display: inline-block;
+		overflow-y: scroll;
+		margin-top: 6vh;
+		margin-left:6vw;
+		margin-right: 6vw;
 	}
 
 	.photo-blurb p {
-		font-size: 1em;
-		margin-right: 4vw;
-		width: 92vw;
+		font-size: 0.8em;
+		width: 88vw;
 	}
 }
