@@ -11,94 +11,50 @@ html
     position: absolute;
 }
 
-.emoji-container {
-    width: 120vw;
-    /*left: -20vw;*/
-    /*position: absolute;*/
-    /*overflow: hidden;*/
+a {
+    color: black;
+    text-decoration: none;
 }
 
-.emoji {
-    position: absolute;
-    top: 70px;
-    left: -5em;
-    font-size: 1em;
-    /*width: 50px;*/
-    height: 50px;
-    -webkit-transition: all 2.5s ease-out;
+a:hover {
+    text-decoration: line-through;
+    outline: none;
 }
 
-.moveto {
-  top: 70px;
-  left: calc(100% - 0.3em);
+
+@media (min-width: 320px) {
+   .nav {
+       margin-top: 17vh;
+       width: 100%;
+       position: relative;
+       /*float: right;*/
+   }
+
+   .nav ul {
+       position: relative;
+       float: right;
+       right: 1.2em;
+       list-style: none;
+       display:inline-block;
+       vertical-align: bottom;
+   }
+
+   .nav ul li h2 {
+       position: relative;
+       text-align:  right;
+      font-size: 10vw;
+      font-family: "Slate Pro";
+   }
+
+   .nav ul li a {
+       float: right;
+       font-size: 9.2vw;
+       margin-bottom: 4.4vh;
+       font-family: "Courier";
+   }
 }
 
-.name {
-  -webkit-animation-duration: 1.5s;
-  -webkit-animation-delay: 0.2s;
-  -webkit-animation-iteration-count: 1;
-}
-
-/*css gradient also as an animation when name is pressed*/
-/*background: linear-gradient(358deg, #246655, #832fad);
-background-size: 400% 400%;
--webkit-animation: AnimationName 2s ease infinite;
--moz-animation: AnimationName 2s ease infinite;
--o-animation: AnimationName 2s ease infinite;
-animation: AnimationName 2s ease infinite;
-@-webkit-keyframes AnimationName {
-    0%{background-position:51% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:51% 0%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:51% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:51% 0%}
-}
-@-o-keyframes AnimationName {
-    0%{background-position:51% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:51% 0%}
-}
-@keyframes AnimationName {
-    0%{background-position:51% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:51% 0%}
-}
-*/
-
-.nav {
-    margin-top: 17vh;
-    width: 100%;
-    position: relative;
-    float: right;
-}
-
-.nav ul {
-    position: relative;
-    float: right;
-    right: 1.2em;
-    list-style: none;
-    display:inline-block;
-    vertical-align: bottom;
-}
-
-.nav ul li h2 {
-    position: relative;
-    text-align:  right;
-    font-size: 10vw;
-    font-family: "Helvetica Neue";
-}
-
-.nav ul li a {
-    float: right;
-    font-size: 9.2vw;
-    margin-bottom: 4.4vh;
-    font-family: "Courier";
-}
-
-@media screen and (orientation: landscape) {
+/*@media screen and (orientation: landscape) {
     .nav {
         margin-top: 0;
         float: right;
@@ -121,7 +77,71 @@ animation: AnimationName 2s ease infinite;
         font-size: 5vw;
         margin-bottom: 5.6vh;
     }
+}*/
+
+
+
+@media (min-width: 767px) {
+   .nav {
+      margin-top: 33vh;
+      width: 100%;
+      position: absolute;
+      text-align: center;
+   }
+
+   .nav ul {
+      float: none;
+   }
+
+   .nav ul li {
+      display: inline-block;
+      font-size: 3vh;
+   }
+
+   .nav ul li h2 {
+      margin-right: 1vw;
+      font-size: 5vw;
+   }
+
+   .nav ul li a {
+      float: none;
+      margin-right: 1vw;
+      margin-bottom: none;
+      font-size: 1.5vw;
+   }
 }
+
+
+/*
+.emoji-container {
+    width: 120vw;
+    /*left: -20vw;*/
+    /*position: absolute;*/
+    /*overflow: hidden;*/
+/*}*/
+
+/*.emoji {
+    position: absolute;
+    top: 70px;
+    left: -5em;
+    font-size: 1em;
+    width: 50px;
+    height: 50px;
+    -webkit-transition: all 2.5s ease-out;
+}
+
+.moveto {
+  top: 70px;
+  left: calc(100% - 0.3em);
+}
+
+.name {
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-delay: 0.2s;
+  -webkit-animation-iteration-count: 1;
+}*/
+
+
 
 
 /* .menu {
@@ -147,15 +167,6 @@ nav li {
     font-family: Courier;
 } */
 
-a {
-    color: black;
-    text-decoration: none;
-}   
-
-a:hover {
-    text-decoration: line-through;
-    outline: none;
-}
 
 /*.container {
     height: 100%;
@@ -223,11 +234,11 @@ footer {
     font-size: .8em;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
+ul.posts {
+    margin: 20px auto 40px;
     font-size: 1.5em;
 }
 
 ul.posts li {
     list-style: none;
-}*/
+}*/*/
