@@ -1,10 +1,17 @@
-.blog-container {
-	/*position: absolute;*/
-	height:100%;
-	width:100%;
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
-.blog-container h1 {
+.blog-container {
+	position: absolute;
+	height:100%;
+	width:100%;
+	color: @gray;
+}
+
+h1 {
 	position: relative;
 	margin-top: 0;
 	margin-bottom: 0.2em;
@@ -13,45 +20,75 @@
 	font-family: "Helvetica Neue";
 }
 
-.bp-list {
-	position: relative;
-	list-style: none;
-	float: right;
-	width:100%;
-	-webkit-padding-start: 0px;
+.blog-cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.row-right {
-	position: relative;
-	float:right;
-	width:30vw;
+.card__item {
+	padding:1rem;
+	width: 90%;
 }
 
-.row-right p {
-	font-family: "Courier"; 
-	font-size: 2.5vw;
-	float:right;
-	margin-right: 3vw;
+@media(min-width: 56rem) {
+	.card__item {
+		padding: 1rem;
+		width: 30%;
+	}
 }
 
-.bp-row {
-	/*height:3em; works with ipad*/
-	height: 2.5em;
-	width:100%;
-	margin-bottom: 1em;
+.card__title {
+	font-family: 'Helvetica Neue';
+	color: @gray-dark;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+	text-transform: uppercase;
 }
 
-.bp-row a {
-	position: relative;
-	float: right;
-	margin-right: 7vw;
-	text-align: bottom;
-	color: black;
-	font-size: 7vw;
-	font-family: "Courier";
-	text-decoration: none;
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.bp-row a:hover {
-	text-decoration: line-through;
+.card__image::before {
+	content: "";
+  display: block;
+  padding-top: 56.25%; // 16:9 aspect ratio
+}
+
+.card__image:hover {
+  filter: contrast(100%);
+}
+
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  //filter: saturate(180%);
+  overflow: hidden;
+position: relative;
+	display: block;
+  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
+}
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card__image--record {
+  background-image: url(https://unsplash.it/800/600?image=39);
 }
