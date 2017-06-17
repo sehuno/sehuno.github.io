@@ -1,4 +1,4 @@
-html
+/*html
 {
   -webkit-tap-highlight-color:transparent;
 }
@@ -52,7 +52,7 @@ a:hover {
        margin-bottom: 4.4vh;
        font-family: "Courier";
    }
-}
+}*/
 
 /*@media screen and (orientation: landscape) {
     .nav {
@@ -81,8 +81,8 @@ a:hover {
 
 
 
-@media (min-width: 767px) {
-   .nav {
+/*@media (min-width: 767px) {*/
+   /*.nav {
       margin-top: 33vh;
       width: 100%;
       position: absolute;
@@ -109,7 +109,7 @@ a:hover {
       margin-bottom: none;
       font-size: 1.5vw;
    }
-}
+}*/
 
 
 /*
