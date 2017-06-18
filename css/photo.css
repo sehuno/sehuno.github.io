@@ -3,13 +3,15 @@ body {
 }
 
 .picture-container {
-	top: 90px;
+	bottom: 0px;
 	left:0;
   width:100%;
   position: absolute;
 }
 
 .picture-holder {
+	top: 90px;
+	bottom: 0px;
 	list-style-type:none;
 	-webkit-margin-after:0;
 	margin:0;

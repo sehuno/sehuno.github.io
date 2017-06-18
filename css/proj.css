@@ -28,7 +28,7 @@ h2 {
   list-style: none;
   -webkit-padding-start: 0;
 }
-
+AAZazaZZZZzZZZZA
 .card__item {
 	padding:3vw;
 	width: 100%;
@@ -54,7 +54,8 @@ h2 {
 .card {
   background-color: white;
   border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  /*box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);*/
+  border:  0 0 1px #929292;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -85,7 +86,7 @@ h2 {
   filter: contrast(70%);
   //filter: saturate(180%);
   overflow: hidden;
-position: relative;
+  position: relative;
 	display: block;
   transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
 }
@@ -104,4 +105,16 @@ position: relative;
 .card__text {
   font-family: "Helvetica Neue";
   font-style: italic;
+  font-size: 0.7em;
+  margin: 1em;
 }
+
+.card__lang {
+  list-style-type: none;
+}
+
+/*.python {
+  background-color: black;
+  width: 10px;
+  height: 10px;
+}*/
