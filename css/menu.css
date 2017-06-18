@@ -19,9 +19,9 @@ input + label span {
   transition: .5s;
 }
 
-input + label span:first-child { top: 3px; }
+input + label span:first-child { top: 1px; }
 
-input + label span:last-child { top: 16px; }
+input + label span:last-child { top: 18px; }
 
 label:hover { cursor: pointer; }
 
