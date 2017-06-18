@@ -3,11 +3,32 @@ layout: page
 title: Proj
 ---
 
-<h1>{{ page.title }}</h1>
+<link rel="stylesheet" type="text/css" href="/css/proj.css">
+<div class="proj-container animsition">
+	<h2>projects</h2>
+	<ul class="proj-cards">
+		{% for post in site.posts %}
+			{% if post.categories contains 'project' %}
+				<li class="card__item">
+					<a class="card" href="{{ post.url }}">
+			      <div class="card__content">
+			        <div class="card__title">{{ post.title }}</div>
+			        <p class="card__text">{{ post.description }}</p>
+			        <!-- <button class="btn btn--block card__btn">Button</button> -->
+			      </div>
+		    	</a>
+				</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+</div>
+
+
+<!-- <h1>{{ page.title }}</h1>
 <ul class="posts">
   {% for post in site.posts %}
   	{% if post.categories contains 'project' %}
     	<li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
     {% endif %}
   {% endfor %}
-</ul>
+</ul> -->
