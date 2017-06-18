@@ -3,8 +3,10 @@ layout: default
 title: blog
 ---
 <link rel="stylesheet" type="text/css" href="/css/blog.css">
-<h1>{{ page.title }}</h1>
+<!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Yellowtail" /> -->
+<link href='https://fonts.googleapis.com/css?family=Lustria' rel='stylesheet'>
 <div class="blog-container animsition">
+	<h2>{{ page.title }}</h2>
 	<ul class="blog-cards">
 		{% for post in site.posts %}
 			{% if post.categories contains 'blogpost' %}

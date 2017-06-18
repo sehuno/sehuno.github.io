@@ -1,4 +1,5 @@
 .about-container {
+    top: 60px;
     width: 100%;
     font-family: "Slabo 27px";
 }
@@ -17,7 +18,7 @@
     font-family: "Neuzeit S W01", "Helvetica Neue";
     font-weight: 300;
     /*-webkit-margin-before: 0.5em;*/
-    -webkit-margin-after: 0.5em;    
+    -webkit-margin-after: 0.5em;
 }
 
 /*.text-item a {
@@ -35,14 +36,14 @@
 
 .sm {
     position: relative;
-    margin-top:33vh;
+    margin-top:25vh;
     width:100%;
 }
 
 .sm ul {
     bottom: -6vh;
     position: relative;
-}   
+}
 
 .sm ul li {
     position: relative;
@@ -62,7 +63,7 @@ a.svg {
 }
 
 a.svg:after {
-    content: ""; 
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
@@ -107,7 +108,7 @@ object {
     }
 
     .sm ul {
-    }   
+    }
 
     .sm ul li {
         position: relative;

@@ -7,17 +7,18 @@ img {
 .blog-container {
 	position: relative;
 	height:100%;
-	width:100%;
-	color: @gray;
+	width:100vw;
+  top:60px;
 }
 
-h1 {
+h2 {
 	position: relative;
 	margin-top: 0;
 	margin-bottom: 0.2em;
 	text-align: center;
-	font-size: 15vw;
-	font-family: "Helvetica Neue";
+	font-size: 8vw;
+  /*font-family: "Helvetica Neue";*/
+	font-family: "Lustria";
 }
 
 .blog-cards {

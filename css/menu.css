@@ -47,7 +47,7 @@ input ~ nav {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 90px;
   z-index: 3;
   transition: .5s;
   transition-delay: .5s;
@@ -57,9 +57,10 @@ input ~ nav {
 input ~ nav > ul {
   text-align: center;
   position: absolute;
-  top: 35%;
-  left: 20%;
-  right: 20%;
+  list-style-type: none;
+  top: 25%;
+  width:100%;
+  -webkit-padding-start: 0;
 }
 
 input ~ nav > ul > li {
