@@ -77,7 +77,7 @@ h2 {
   filter: contrast(70%);
   //filter: saturate(180%);
   overflow: hidden;
-position: relative;
+  position: relative;
 	display: block;
   transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
 }
@@ -91,4 +91,12 @@ position: relative;
 
 .card__image--record {
   background-image: url(https://unsplash.it/800/600?image=39);
+}
+
+.dreams {
+  background-image: url(http://c1.staticflickr.com/1/558/18922282545_90e37d5a51_z.jpg);
+}
+
+.retail {
+  background-image: url(http://www.georgetowner.com/media/images/derivatives/article_Screen_shot_2015-08-03_at_5.47.05_PM.png)
 }

@@ -12,11 +12,10 @@ title: blog
 			{% if post.categories contains 'blogpost' %}
 				<li class="card__item">
 					<div class="card">
-			      <a class="card__image card__image--record" href="{{ post.url }}"></a>
+			      <a class="card__image {{post.title}}" href="{{ post.url }}"></a>
 			      <div class="card__content">
 			        <div class="card__title">{{ post.title }}</div>
 			        <p class="card__text">{{ post.blurb }}</p>
-			        <!-- <button class="btn btn--block card__btn">Button</button> -->
 			      </div>
 		    	</div>
 				</li>
