@@ -3,17 +3,18 @@ body {
 }
 
 .picture-container {
-	bottom: 0px;
 	left:0;
   width:100%;
+	height: 100%;
+	bottom:0px;
   position: absolute;
 }
 
 .picture-holder {
-	top: 90px;
-	bottom: 0px;
 	list-style-type:none;
 	-webkit-margin-after:0;
+	top:90px;
+	position:relative;
 	margin:0;
 	padding:0;
 }
