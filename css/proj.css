@@ -65,7 +65,7 @@ h2 {
   /*box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);*/
   display: flex;
   flex-direction: column;
-  min-height: 150px;
+  /*min-height: 150px;*/
   overflow: hidden;
 }
 
@@ -118,6 +118,9 @@ h2 {
 
 .card__tag {
   margin-top: 4px;
+  border-radius: 40px;
+  color: white;
+  padding: 4px;
 }
 
 .card__separator {
@@ -142,6 +145,34 @@ h2 {
 
 .python span {
   background-color: rgba(0, 194, 255, 0.72);
+  border-radius: 40px;
+  color: white;
+  padding: 4px;
+}
+
+.ocaml span {
+  background-color: rgba(255, 188, 0, 0.76);
+  border-radius: 40px;
+  color: white;
+  padding: 4px;
+}
+
+.java span {
+  background-color: rgba(30, 202, 115, 0.96);
+  border-radius: 40px;
+  color: white;
+  padding: 4px;
+}
+
+.prolog span {
+  background-color: rgba(30, 83, 202, 0.77);
+  border-radius: 40px;
+  color: white;
+  padding: 4px;
+}
+
+.scheme span {
+  background-color: rgba(234, 13, 13, 0.75);
   border-radius: 40px;
   color: white;
   padding: 4px;
