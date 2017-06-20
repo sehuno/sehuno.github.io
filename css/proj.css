@@ -1,9 +1,19 @@
+body {
+  background: #fbfbfb;
+  color: #777;
+  -webkit-user-select: none;
+}
+
 img {
   height: auto;
   max-width: 100%;
   vertical-align: middle;
 }
 
+a {
+  text-decoration: none;
+  color: #777;
+}
 .proj-container {
 	position: relative;
 	height:100%;
@@ -13,13 +23,12 @@ img {
 
 h2 {
 	position: relative;
-	margin-top: 0;
-	margin-bottom: 0.2em;
+	margin: 0.2em;
 	text-align: center;
-	font-size: 3vw;
-  /*letter-spacing: 5px;*/
-  font-family: "Helvetica Neue";
-	/*font-family: "Courier New";*/
+	font-size: 8vw;
+  /*font-family: "Helvetica Neue";*/
+	/*font-family: "Lustria";*/
+  font-family: 'Montserrat';
 }
 
 .proj-cards {
@@ -28,7 +37,7 @@ h2 {
   list-style: none;
   -webkit-padding-start: 0;
 }
-AAZazaZZZZzZZZZA
+
 .card__item {
 	padding:3vw;
 	width: 100%;
@@ -37,39 +46,30 @@ AAZazaZZZZzZZZZA
 @media(min-width: 56rem) {
 	.card__item {
 		padding: 1rem;
-		width: 20%;
+		width: 30%;
 	}
 }
 
 .card__title {
-	/*font-family: 'Courier';*/
-  font-family: 'Helvetica Neue';
+	font-family: 'Montserrat';
 	color: @gray-dark;
   font-size: 1.25rem;
   font-weight: 300;
   letter-spacing: 2px;
-	text-transform: lowercase;
-  text-align: center;
+	text-transform: uppercase;
 }
 
 .card {
   background-color: white;
-  border-radius: 0.25rem;
-  min-height: 200px;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-  border:  0 0 1px #929292;
+  border-radius: 0.1rem;
+  /*box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);*/
   display: flex;
   flex-direction: column;
+  min-height: 150px;
   overflow: hidden;
-  text-decoration: none;
 }
 
-/*.card:hover {
-  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
-  transition: 0.01s;
-}*/
-
-.card__image::before {
+/*.card__image::before {
 	content: "";
   display: block;
   padding-top: 56.25%; // 16:9 aspect ratio
@@ -91,7 +91,7 @@ AAZazaZZZZzZZZZA
   position: relative;
 	display: block;
   transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
-}
+}*/
 
 .card__content {
   display: flex;
@@ -100,23 +100,49 @@ AAZazaZZZZzZZZZA
   padding: 1rem;
 }
 
+.card__lang {
+  list-style-type: none;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  -webkit-padding-start: 0px;
+  /*color: inherit;*/
+  /*margin-top: 5px;*/
+  font-size: 10px;
+}
+
+.card__text {
+  font-family: 'Merriweather', serif;
+  font-size: 12px;
+}
+
+.card__tag {
+  margin-top: 4px;
+}
+
+.card__separator {
+  margin-top: 10px;
+  width:35px;
+  height:3px;
+  background:#777;
+  border:none;
+}
+
 .card__image--record {
   background-image: url(https://unsplash.it/800/600?image=39);
 }
 
-.card__text {
-  font-family: "Helvetica Neue";
-  font-style: italic;
-  font-size: 0.7em;
-  margin: 1em;
+.dreams {
+  background-image: url(http://c1.staticflickr.com/1/558/18922282545_90e37d5a51_z.jpg);
 }
 
-.card__lang {
-  list-style-type: none;
+.retail {
+  background-image: url(http://www.georgetowner.com/media/images/derivatives/article_Screen_shot_2015-08-03_at_5.47.05_PM.png)
 }
 
-/*.python {
-  background-color: black;
-  width: 10px;
-  height: 10px;
-}*/
+.python span {
+  background-color: rgba(0, 194, 255, 0.72);
+  border-radius: 40px;
+  color: white;
+  padding: 4px;
+}

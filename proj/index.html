@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Proj
+title: Projects
 ---
-
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
 <link rel="stylesheet" type="text/css" href="/css/proj.css">
 <div class="proj-container animsition">
 	<h2>projects</h2>
@@ -13,10 +14,11 @@ title: Proj
 					<a class="card" href="{{ post.url }}">
 			      <div class="card__content">
 			        <div class="card__title">{{ post.title }}</div>
+							<div class="card__separator"></div>
 			        <p class="card__text">{{ post.description }}</p>
               {% for language in post.languages %}
                 <ul class="card__lang">
-                  <li class="{{ language }}">{{ language }}</li>
+                  <li class="card__tag {{ language }}"><span>{{ language }}</span></li>
                 </ul>
               {% endfor %}
 			        <!-- <button class="btn btn--block card__btn">Button</button> -->
