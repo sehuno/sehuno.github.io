@@ -4,7 +4,8 @@ title: blog
 ---
 <link rel="stylesheet" type="text/css" href="/css/blog.css">
 <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Yellowtail" /> -->
-<link href='https://fonts.googleapis.com/css?family=Lustria' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
 <div class="blog-container animsition">
 	<h2>{{ page.title }}</h2>
 	<ul class="blog-cards">
@@ -12,10 +13,12 @@ title: blog
 			{% if post.categories contains 'blogpost' %}
 				<li class="card__item">
 					<div class="card">
-			      <a class="card__image {{post.title}}" href="{{ post.url }}"></a>
+			      <!-- <a class="card__image {{post.title}}" href="{{ post.url }}"></a> -->
 			      <div class="card__content">
 			        <div class="card__title">{{ post.title }}</div>
+							<div class="card__separator"></div>
 			        <p class="card__text">{{ post.blurb }}</p>
+							<a class="card__read" href="{{ post.url }}">Read More</a>
 			      </div>
 		    	</div>
 				</li>
