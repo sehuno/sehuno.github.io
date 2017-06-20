@@ -1,5 +1,7 @@
-.post-top {
-
+.post-container {
+	top: 40px;
+	margin:1em;
+	position: relative;
 }
 
 .post-top h1 {
@@ -8,10 +10,12 @@
 
 .post-top p {
 	font-family: "Courier";
+	font-size: 12px;
 }
 
 .post-body p {
-	font-family: "Slabo 27px";
-	font-size: 5vw;
+	text-indent: 30px;
+	font-family: 'Merriweather', serif;
+	font-size: 12px;
 	line-height: 140%;
 }
