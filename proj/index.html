@@ -11,7 +11,8 @@ title: Projects
 		{% for post in site.posts %}
 			{% if post.categories contains 'project' %}
 				<li class="card__item">
-					<a class="card" href="{{ post.url }}">
+					<!-- <a class="card" href="{{ post.url }}"> -->
+					<a class="card" href="{{ post.github_url }}">
 			      <div class="card__content">
 			        <div class="card__title">{{ post.title }}</div>
 							<div class="card__separator"></div>
