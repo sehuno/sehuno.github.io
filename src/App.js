@@ -20,7 +20,7 @@ function App() {
       <div onClick={() => setIsOpen(false)} style={{position:"absolute",display:"flex", flexDirection:"column", width:"100%", height:"100%"}}>
         <AnimatePresence>
           { !isOpen && <motion.div
-            style={{display:"flex",backgroundColor:"lightblue", width:"100%", height:"50%"}}
+            style={{display:"flex",backgroundColor:"lightgrey", width:"100%", height:"50%"}}
             exit={{ y: "-100%", opacity: 0 }}
             transition={{ duration: 1 }}
           >
@@ -28,7 +28,7 @@ function App() {
         </AnimatePresence>
         <AnimatePresence>
           { !isOpen && <motion.div
-            style={{display:"flex",backgroundColor:"lightgreen", width:"100%", height:"50%"}}
+            style={{display:"flex",backgroundColor:"lightgrey", width:"100%", height:"50%"}}
             exit={{ y: "+100%", opacity: 0 }}
             transition={{ duration: 1 }}
           >
@@ -62,6 +62,7 @@ function Menu() {
     </div>
   )
 }
+
 function Photo() {
   return(
     <div></div>
