@@ -22,27 +22,24 @@ function App() {
         style={{borderRadius: "50%",width:"100px", height:"100px", left:"47%",top:"47%", backgroundColor:"white",zIndex:"1", position:"absolute"}}
         onClick={() => setIsOpen(true)}>
       </div>
-      <AnimatePresence>
-        {!isOpen && <motion.div
-                        style={{display:"flex", flexDirection:"column", width:"100%", height:"100%"}}
-                        exit={{ opacity: 0 }}
+      <div style={{position:"absolute",display:"flex", flexDirection:"column", width:"100%", height:"100%"}}>
+        <AnimatePresence>
+        { !isOpen && <motion.div
+          style={{display:"flex",backgroundColor:"lightblue", width:"100%", height:"50%"}}
+          exit={{ y: "-100%", opacity: 0 }}
+          transition={{ duration: 2 }}
         >
-          <motion.div
-            style={{display:"flex",backgroundColor:"lightblue", width:"100%", height:"50%"}}
-            animate={isOpen ? "open" : "closed"}
-            variants={rootTopVariants}
-            transition={{ duration: 1 }}
-          >
-          </motion.div>
-          <motion.div
-            style={{display:"flex",backgroundColor:"lightgreen", width:"100%", height:"50%"}}
-            animate={isOpen ? "open" : "closed"}
-            variants={rootBottomVariants}
-            transition={{ duration: 1 }}
-          >
-          </motion.div>
-        </motion.div>}
-      </AnimatePresence>
+        </motion.div> }
+        </AnimatePresence>
+        <AnimatePresence>
+        { !isOpen && <motion.div
+          style={{display:"flex",backgroundColor:"lightgreen", width:"100%", height:"50%"}}
+          exit={{ y: "+100%", opacity: 0 }}
+          transition={{ duration: 2 }}
+        >
+        </motion.div> }
+        </AnimatePresence>
+      </div>
       {isOpen && <Menu></Menu>}
     </div>
   );
@@ -50,7 +47,7 @@ function App() {
 
 function Menu() {
   return(
-    <div>
+    <div style={{position:"absolute"}}>
       <ul>
         <li>About Me</li>
         <li>Blog</li>
