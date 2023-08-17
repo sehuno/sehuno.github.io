@@ -64,42 +64,59 @@ const photoModalStyles = {
   }
 };
 
+const projects = [
+  {}
+]
+
 function Menu() {
   const [aboutMeOpen, setAboutMeOpen] = useState(true)
   const [blogOpen, setBlogOpen] = useState(true)
   const [projectsOpen, setProjectsOpen] = useState(true)
   const [photographyOpen, setPhotographyOpen] = useState(true)
 
+  const [aboutMeClicked, setAboutMeClicked] = useState(false)
+  const [blogClicked, setBlogClicked] = useState(false)
+  const [projectClicked, setProjectsClicked] = useState(false)
+
   const [photographyModalOpen, setPhotographyModalOpen] = useState(false)
 
-  function aboutMeClicked() {
+  function aboutMe() {
+    hideMenu()
+    setAboutMeClicked(true)
+  }
+
+  function blog() {
+    hideMenu()
+    setBlogClicked(true)
+  }
+
+  function projects() {
+    hideMenu()
+    setProjectsClicked(true)
+  }
+
+  function hideMenu() {
+    setAboutMeOpen(false)
+    setBlogOpen(false)
+    setProjectsOpen(false)
+    setPhotographyOpen(false)
+  }
+
+  function reset() {
     setAboutMeOpen(true)
-    setBlogOpen(false)
-    setProjectsOpen(false)
-    setPhotographyOpen(false)
-  }
-
-  function blogClicked() {
-    setAboutMeOpen(false)
     setBlogOpen(true)
-    setProjectsOpen(false)
-    setPhotographyOpen(false)
-  }
-
-  function projectsClicked() {
-    setAboutMeOpen(false)
-    setBlogOpen(false)
     setProjectsOpen(true)
-    setPhotographyOpen(false)
+    setPhotographyOpen(true)
   }
 
   function photographyClicked() {
-    setAboutMeOpen(false)
-    setBlogOpen(false)
-    setProjectsOpen(false)
-    setPhotographyOpen(false)
-
+    hideMenu()
     setPhotographyModalOpen(true)
+  }
+
+  function photoModalExit() {
+    reset()
+    setPhotographyModalOpen(false)
   }
 
   return(
@@ -112,7 +129,7 @@ function Menu() {
             initial={{opacity:0, translateX:-500}}
             animate={{opacity:1, translateX:0}}
             transition={{duration: 0.8, delay: 0.1}}
-            onClick={photographyClicked}
+            onClick={aboutMe}
             exit={{ opacity: 0 }}
           >
             <p style={{fontSize:"4.5rem"}}>About Me</p>
@@ -125,7 +142,7 @@ function Menu() {
             initial={{opacity:0, translateX:-500}}
             animate={{opacity:1, translateX:0}}
             transition={{duration: 0.8, delay: 0.2 }}
-            onClick={photographyClicked}
+            onClick={blog}
             exit={{ opacity: 0 }}
           >
             <p style={{fontSize:"4.5rem"}}>Blog</p>
@@ -138,13 +155,14 @@ function Menu() {
             initial={{opacity:0, translateX:-500}}
             animate={{opacity:1, translateX:0}}
             transition={{duration: 0.8, delay: 0.3 }}
-            onClick={photographyClicked}
+            onClick={projects}
             exit={{ opacity: 0 }}
           >
             <p style={{fontSize:"4.5rem"}}>Projects</p>
           </motion.div>
         }
       </AnimatePresence>
+
       <AnimatePresence>
         { photographyOpen &&
           <motion.div
@@ -160,7 +178,7 @@ function Menu() {
       </AnimatePresence>
       <Modal
         closeTimeoutMS={600}
-        onRequestClose={() => setPhotographyModalOpen(false)}
+        onRequestClose={() => photoModalExit()}
         isOpen={photographyModalOpen}
         style={photoModalStyles}
       >
@@ -185,7 +203,11 @@ function Photo() {
       <img src="/i10.jpg" alt="image" style={{marginRight:"20px"}}/>
       <img src="/i11.jpg" alt="image" style={{marginRight:"20px"}}/>
       <img src="/i12.jpg" alt="image" style={{marginRight:"20px"}}/>
-      <img src="/i13.jpg" alt="image"/>
+      <img src="/i13.jpg" alt="image" style={{marginRight:"20px"}}/>
+      <img src="/i14.jpg" alt="image" style={{marginRight:"20px"}}/>
+      <img src="/i15.jpg" alt="image" style={{marginRight:"20px"}}/>
+      <img src="/i16.jpg" alt="image" style={{marginRight:"20px"}}/>
+      <img src="/i17.jpg" alt="image"/>
     </HorizontalScroll>
   )
 }
