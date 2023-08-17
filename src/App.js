@@ -3,6 +3,7 @@ import React, {Component, useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion"
 import Modal from 'react-modal';
 import HorizontalScroll from 'react-scroll-horizontal'
+import Fade from 'react-reveal/Fade';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -120,70 +121,72 @@ function Menu() {
   }
 
   return(
-    <div
-      style={{position:"absolute", width:"30rem",height:"25rem", margin:"auto", left:"40%", top:"10%"}}
-    >
-      <AnimatePresence>
-        { aboutMeOpen &&
-          <motion.div
-            initial={{opacity:0, translateX:-500}}
-            animate={{opacity:1, translateX:0}}
-            transition={{duration: 0.8, delay: 0.1}}
-            onClick={aboutMe}
-            exit={{ opacity: 0 }}
-          >
-            <p style={{fontSize:"4.5rem"}}>About Me</p>
-          </motion.div>
-        }
-      </AnimatePresence>
-      <AnimatePresence>
-        { blogOpen &&
-          <motion.div
-            initial={{opacity:0, translateX:-500}}
-            animate={{opacity:1, translateX:0}}
-            transition={{duration: 0.8, delay: 0.2 }}
-            onClick={blog}
-            exit={{ opacity: 0 }}
-          >
-            <p style={{fontSize:"4.5rem"}}>Blog</p>
-          </motion.div>
-        }
-      </AnimatePresence>
-      <AnimatePresence>
-        { projectsOpen &&
-          <motion.div
-            initial={{opacity:0, translateX:-500}}
-            animate={{opacity:1, translateX:0}}
-            transition={{duration: 0.8, delay: 0.3 }}
-            onClick={projects}
-            exit={{ opacity: 0 }}
-          >
-            <p style={{fontSize:"4.5rem"}}>Projects</p>
-          </motion.div>
-        }
-      </AnimatePresence>
-      { projectsClicked && <Projects></Projects> }
-      <AnimatePresence>
-        { photographyOpen &&
-          <motion.div
-            initial={{opacity:0, translateX:-500}}
-            animate={{opacity:1, translateX:0}}
-            transition={{duration: 0.8, delay: 0.4 }}
-            exit={{ opacity: 0 }}
-            onClick={photographyClicked}
-          >
-            <p style={{fontSize:"4.5rem"}}>Photography</p>
-          </motion.div>
-        }
-      </AnimatePresence>
-      <Modal
-        closeTimeoutMS={600}
-        onRequestClose={() => photoModalExit()}
-        isOpen={photographyModalOpen}
-        style={photoModalStyles}
+    <div style={{width:"100%", height:"100%"}}>
+      <div
+        style={{position:"absolute", width:"30rem",height:"25rem", margin:"auto", left:"40%", top:"10%"}}
       >
-        <Photo></Photo>
-      </Modal>
+        <AnimatePresence>
+          { aboutMeOpen &&
+            <motion.div
+              initial={{opacity:0, translateX:-500}}
+              animate={{opacity:1, translateX:0}}
+              transition={{duration: 0.8, delay: 0.1}}
+              onClick={aboutMe}
+              exit={{ opacity: 0 }}
+            >
+              <p style={{fontSize:"4.5rem"}}>About Me</p>
+            </motion.div>
+          }
+        </AnimatePresence>
+        <AnimatePresence>
+          { blogOpen &&
+            <motion.div
+              initial={{opacity:0, translateX:-500}}
+              animate={{opacity:1, translateX:0}}
+              transition={{duration: 0.8, delay: 0.2 }}
+              onClick={blog}
+              exit={{ opacity: 0 }}
+            >
+              <p style={{fontSize:"4.5rem"}}>Blog</p>
+            </motion.div>
+          }
+        </AnimatePresence>
+        <AnimatePresence>
+          { projectsOpen &&
+            <motion.div
+              initial={{opacity:0, translateX:-500}}
+              animate={{opacity:1, translateX:0}}
+              transition={{duration: 0.8, delay: 0.3 }}
+              onClick={projects}
+              exit={{ opacity: 0 }}
+            >
+              <p style={{fontSize:"4.5rem"}}>Projects</p>
+            </motion.div>
+          }
+        </AnimatePresence>
+        <AnimatePresence>
+          { photographyOpen &&
+            <motion.div
+              initial={{opacity:0, translateX:-500}}
+              animate={{opacity:1, translateX:0}}
+              transition={{duration: 0.8, delay: 0.4 }}
+              exit={{ opacity: 0 }}
+              onClick={photographyClicked}
+            >
+              <p style={{fontSize:"4.5rem"}}>Photography</p>
+            </motion.div>
+          }
+        </AnimatePresence>
+        <Modal
+          closeTimeoutMS={600}
+          onRequestClose={() => photoModalExit()}
+          isOpen={photographyModalOpen}
+          style={photoModalStyles}
+        >
+          <Photo></Photo>
+        </Modal>
+      </div>
+      { projectsClicked && <Projects></Projects> }
     </div>
   )
 }
@@ -215,7 +218,7 @@ function Photo() {
 const projectsList = [
   { id: 1, title:"Audeo", language:"Python", url: "https://github.com/sehuno/Audeo", excerpt:"A python webscraping and web automation script that downloads a desired song and finds all related attributes such as album name, album artwork, and lyrics in order to create a complete mp3 file."},
   { id: 2, title: "ROTD", language:"Python", url:"https://github.com/sehuno/ROTD", excerpt:"ROTD is a python script which provides a recap of the day by web scraping various websites."},
-  { id: 3, title:"Matcher", language:"OCaml", url:"", excerpt:"A matcher function that inspects a given string of terminals to find a match for a prefix that corresponds to a nonterminal symbol of a grammar, and then checks whether the match is acceptable by testing whether a given acceptor succeeds on the corresponding derivation and suffix."},
+  { id: 3, title:"Context Free Grammar Matching", language:"OCaml", url:"https://github.com/sehuno/CS131/blob/master/hw/hw1/hw1_spec.pdf", excerpt:"A matcher function that inspects a given string of terminals to find a match for a prefix that corresponds to a nonterminal symbol of a grammar, and then checks whether the match is acceptable by testing whether a given acceptor succeeds on the corresponding derivation and suffix."},
   { id: 4, title:"Edison Embedded Device", language:"C", url:"https://github.com/sehuno/CS111/blob/master/projects/lab4/lab4.pdf", excerpt:"Intel Edison embedded device application that supports the use of a sensor to gather data and acts as a client using a predefined network protocol to interact with a remove server program." },
   { id: 5, title: "Grammar Filters", language:"OCaml", url:"https://github.com/sehuno/CS131/blob/master/hw/hw2/hw2.ml", excerpt:"Grammar filter function that filters out blind-alleys rules, that is, grammar rules for which it is impossible to derive a string of terminal symbols."},
   { id: 6, title:"Java Synchronization", language:"Java", url:"https://github.com/sehuno/CS131/blob/master/hw/hw3/hw3_spec.pdf", excerpt:"A Java sequential-consistency-violating performance and reliability testing program that tests Null and Synchronized classes, using various values for the number of threads, number of swap transitions, size of the state array, and sum of the values in the state array, and characterizes the performance of the two classes. "},
@@ -226,7 +229,74 @@ const projectsList = [
 
 function Projects() {
   return(
-    <Modal></Modal>
+    <motion.div
+      initial={{opacity:0 }}
+      animate={{opacity:1 }}
+      transition={{duration: 3}}
+      style={{position:"relative", width:"1200px", height:"1000px", margin:"auto", marginTop:"40px"}}
+    >
+      {projectsList.map((project) => {
+        return (
+          <Project project={project}></Project>
+        );
+      })}
+    </motion.div>
+  )
+}
+
+const projectModalStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    width: '1000px',
+    height: '1200px',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    padding: 'none',
+    zIndex: '15',
+    boxShadow: 'rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px',
+  }
+};
+
+function Project(props) {
+  const [modalOpen, setModalOpen] = useState(false)
+
+  return(
+    <Fade bottom delay={1000}>
+      <div
+        style={{width:"100%", height:"250px", marginBottom:"50px", boxShadow: "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px"}}
+      >
+        <div style={{display:"flex", flexDirection:"column", width:"100%", height:"100%"}}>
+          <div style={{display:"flex", width:"100%", height:"25%", backgroundColor:"lightgreen"}}>
+            <div style={{display:"flex", width:"70%", height:"100%", backgroundColor:"lightgreen"}}
+              onClick={() => setModalOpen(!modalOpen)}
+            >
+              <p style={{fontSize:"36px", position:"absolute", marginTop:"10px", marginLeft:"10px"}}>{props.project.title}</p>
+            </div>
+            <div style={{display:"flex", width:"20%", height:"100%", backgroundColor:"lightgreen"}}>
+              <p style={{fontSize:"20px"}}>{props.project.language}</p>
+            </div>
+            <div style={{display:"flex", width:"10%", height:"100%", backgroundColor:"lightgreen"}}>
+              <a href={props.project.url}><img src="/github-logo.png" alt="image" style={{width:"100%"}} /></a>
+            </div>
+          </div>
+          <div style={{width:"100%", height:"75%", backgroundColor:"lightblue"}}
+            onClick={() => setModalOpen(!modalOpen)}
+          >
+            <p style={{fontSize:"24px", padding:"20px"}}>{props.project.excerpt}</p>
+          </div>
+        </div>
+        <Modal
+          closeTimeoutMS={600}
+          onRequestClose={() => setModalOpen(false)}
+          isOpen={modalOpen}
+          style={projectModalStyles}
+        >
+        </Modal>
+      </div>
+    </Fade>
   )
 }
 
