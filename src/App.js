@@ -159,7 +159,7 @@ function Menu() {
         }
       </AnimatePresence>
       <Modal
-        closeTimeoutMS={500}
+        closeTimeoutMS={600}
         onRequestClose={() => setPhotographyModalOpen(false)}
         isOpen={photographyModalOpen}
         style={photoModalStyles}
@@ -173,19 +173,19 @@ function Menu() {
 function Photo() {
   return(
     <HorizontalScroll>
-      <img src="/i1.jpg" alt="image" />
-      <img src="/i2.jpg" alt="image" />
-      <img src="/i3.jpg" alt="image" />
-      <img src="/i4.jpg" alt="image" />
-      <img src="/i5.jpg" alt="image" />
-      <img src="/i6.jpg" alt="image" />
-      <img src="/i7.jpg" alt="image" />
-      <img src="/i8.jpg" alt="image" />
-      <img src="/i9.jpg" alt="image" />
-      <img src="/i10.jpg" alt="image" />
-      <img src="/i11.jpg" alt="image" />
-      <img src="/i12.jpg" alt="image" />
-      <img src="/i13.jpg" alt="image" />
+      <img src="/i1.jpg" alt="image" style={{marginRight:"20px"}} />
+      <img src="/i2.jpg" alt="image" style={{marginRight:"20px"}}/>
+      <img src="/i3.jpg" alt="image" style={{marginRight:"20px"}}/>
+      <img src="/i4.jpg" alt="image" style={{marginRight:"20px"}}/>
+      <img src="/i5.jpg" alt="image" style={{marginRight:"20px"}}/>
+      <img src="/i6.jpg" alt="image" style={{marginRight:"20px"}}/>
+      <img src="/i7.jpg" alt="image" style={{marginRight:"20px"}}/>
+      <img src="/i8.jpg" alt="image" style={{marginRight:"20px"}}/>
+      <img src="/i9.jpg" alt="image" style={{marginRight:"20px"}}/>
+      <img src="/i10.jpg" alt="image" style={{marginRight:"20px"}}/>
+      <img src="/i11.jpg" alt="image" style={{marginRight:"20px"}}/>
+      <img src="/i12.jpg" alt="image" style={{marginRight:"20px"}}/>
+      <img src="/i13.jpg" alt="image"/>
     </HorizontalScroll>
   )
 }
