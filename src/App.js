@@ -48,17 +48,95 @@ const menuList = [
 ]
 
 function Menu() {
+  const [aboutMeOpen, setAboutMeOpen] = useState(true)
+  const [blogOpen, setBlogOpen] = useState(true)
+  const [projectsOpen, setProjectsOpen] = useState(true)
+  const [photographyOpen, setPhotographyOpen] = useState(true)
+
+  function aboutMeClicked() {
+    setAboutMeOpen(true)
+    setBlogOpen(false)
+    setProjectsOpen(false)
+    setPhotographyOpen(false)
+  }
+
+  function blogClicked() {
+    setAboutMeOpen(false)
+    setBlogOpen(true)
+    setProjectsOpen(false)
+    setPhotographyOpen(false)
+  }
+
+  function projectsClicked() {
+    setAboutMeOpen(false)
+    setBlogOpen(false)
+    setProjectsOpen(true)
+    setPhotographyOpen(false)
+  }
+
+  function photographyClicked() {
+    setAboutMeOpen(false)
+    setBlogOpen(false)
+    setProjectsOpen(false)
+    setPhotographyOpen(false)
+  }
+
   return(
-    <div style={{position:"absolute", width:"30rem",height:"25rem", margin:"auto", left:"40%", top:"15%"}}>
-      {menuList.map((item, i) => (
-        <motion.div key={item.id}
-          initial={{opacity:0, translateX:-500}}
-          animate={{opacity:1, translateX:0}}
-          transition={{duration: 0.8, delay: i * 0.1}}
-        >
-          <p style={{fontSize:"4.5rem"}}>{item.title}</p>
-        </motion.div>
-      ))}
+    <div
+      style={{position:"absolute", width:"30rem",height:"25rem", margin:"auto", left:"40%", top:"10%"}}
+    >
+      <AnimatePresence>
+        { aboutMeOpen &&
+          <motion.div
+            initial={{opacity:0, translateX:-500}}
+            animate={{opacity:1, translateX:0}}
+            transition={{duration: 0.8, delay: 0.1}}
+            onClick={photographyClicked}
+            exit={{ opacity: 0 }}
+          >
+            <p style={{fontSize:"4.5rem"}}>About Me</p>
+          </motion.div>
+        }
+      </AnimatePresence>
+      <AnimatePresence>
+        { blogOpen &&
+          <motion.div
+            initial={{opacity:0, translateX:-500}}
+            animate={{opacity:1, translateX:0}}
+            transition={{duration: 0.8, delay: 0.2 }}
+            onClick={photographyClicked}
+            exit={{ opacity: 0 }}
+          >
+            <p style={{fontSize:"4.5rem"}}>Blog</p>
+          </motion.div>
+        }
+      </AnimatePresence>
+      <AnimatePresence>
+        { projectsOpen &&
+          <motion.div
+            initial={{opacity:0, translateX:-500}}
+            animate={{opacity:1, translateX:0}}
+            transition={{duration: 0.8, delay: 0.3 }}
+            onClick={photographyClicked}
+            exit={{ opacity: 0 }}
+          >
+            <p style={{fontSize:"4.5rem"}}>Projects</p>
+          </motion.div>
+        }
+      </AnimatePresence>
+      <AnimatePresence>
+        { photographyOpen &&
+          <motion.div
+            initial={{opacity:0, translateX:-500}}
+            animate={{opacity:1, translateX:0}}
+            transition={{duration: 0.8, delay: 0.4 }}
+            exit={{ opacity: 0 }}
+            onClick={photographyClicked}
+          >
+            <p style={{fontSize:"4.5rem"}}>Photography</p>
+          </motion.div>
+        }
+      </AnimatePresence>
     </div>
   )
 }
