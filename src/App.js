@@ -2,6 +2,7 @@ import './App.css';
 import React, {Component, useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion"
 import Modal from 'react-modal';
+import HorizontalScroll from 'react-scroll-horizontal'
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -47,11 +48,29 @@ const menuList = [
   { id: 4, title:"Photography"},
 ]
 
+const photoModalStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    width: '1200px',
+    height: '800px',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    padding: 'none',
+    zIndex: '10',
+    boxShadow: 'rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px',
+  }
+};
+
 function Menu() {
   const [aboutMeOpen, setAboutMeOpen] = useState(true)
   const [blogOpen, setBlogOpen] = useState(true)
   const [projectsOpen, setProjectsOpen] = useState(true)
   const [photographyOpen, setPhotographyOpen] = useState(true)
+
+  const [photographyModalOpen, setPhotographyModalOpen] = useState(false)
 
   function aboutMeClicked() {
     setAboutMeOpen(true)
@@ -79,6 +98,8 @@ function Menu() {
     setBlogOpen(false)
     setProjectsOpen(false)
     setPhotographyOpen(false)
+
+    setPhotographyModalOpen(true)
   }
 
   return(
@@ -137,13 +158,35 @@ function Menu() {
           </motion.div>
         }
       </AnimatePresence>
+      <Modal
+        closeTimeoutMS={500}
+        onRequestClose={() => setPhotographyModalOpen(false)}
+        isOpen={photographyModalOpen}
+        style={photoModalStyles}
+      >
+        <Photo></Photo>
+      </Modal>
     </div>
   )
 }
 
 function Photo() {
   return(
-    <div></div>
+    <HorizontalScroll>
+      <img src="/i1.jpg" alt="image" />
+      <img src="/i2.jpg" alt="image" />
+      <img src="/i3.jpg" alt="image" />
+      <img src="/i4.jpg" alt="image" />
+      <img src="/i5.jpg" alt="image" />
+      <img src="/i6.jpg" alt="image" />
+      <img src="/i7.jpg" alt="image" />
+      <img src="/i8.jpg" alt="image" />
+      <img src="/i9.jpg" alt="image" />
+      <img src="/i10.jpg" alt="image" />
+      <img src="/i11.jpg" alt="image" />
+      <img src="/i12.jpg" alt="image" />
+      <img src="/i13.jpg" alt="image" />
+    </HorizontalScroll>
   )
 }
 
