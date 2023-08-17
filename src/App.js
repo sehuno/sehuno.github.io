@@ -266,26 +266,33 @@ function Project(props) {
   return(
     <Fade bottom delay={1000}>
       <div
-        style={{width:"100%", height:"250px", marginBottom:"50px", boxShadow: "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px"}}
+        style={{width:"100%", height:"250px", marginBottom:"50px", boxShadow: "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px", borderRadius:"10px"}}
       >
         <div style={{display:"flex", flexDirection:"column", width:"100%", height:"100%"}}>
-          <div style={{display:"flex", width:"100%", height:"25%", backgroundColor:"lightgreen"}}>
-            <div style={{display:"flex", width:"70%", height:"100%", backgroundColor:"lightgreen"}}
+          <div style={{display:"flex", width:"100%", height:"25%", backgroundColor:"lightgrey"}}>
+            <div style={{display:"flex", width:"70%", height:"100%", backgroundColor:"#c8c9ac"}}
               onClick={() => setModalOpen(!modalOpen)}
             >
-              <p style={{fontSize:"36px", position:"absolute", marginTop:"10px", marginLeft:"10px"}}>{props.project.title}</p>
+              <p style={{fontSize:"36px", position:"absolute", marginTop:"10px", marginLeft:"10px", color:"#787867"}}>{props.project.title}</p>
             </div>
-            <div style={{display:"flex", width:"20%", height:"100%", backgroundColor:"lightgreen"}}>
-              <p style={{fontSize:"20px"}}>{props.project.language}</p>
+            <div style={{display:"flex", width:"20%", height:"100%", backgroundColor:"#E0E0E0"}}>
+              <div style={{position:"relative", margin:"auto", padding:"10px", borderRadius:"20px"}}>
+                { props.project.language === "Python" && <p style={{fontSize:"20px", position:"relative", margin:"auto", color:"blue", fontWeight:"bold"}}>{props.project.language}</p> }
+                { props.project.language === "OCaml" && <p style={{fontSize:"20px", position:"relative", margin:"auto", color:"red", fontWeight:"bold"}}>{props.project.language}</p> }
+                { props.project.language === "C" && <p style={{fontSize:"20px", position:"relative", margin:"auto", color:"yellow", fontWeight:"bold"}}>{props.project.language}</p> }
+                { props.project.language === "Java" && <p style={{fontSize:"20px", position:"relative", margin:"auto", color:"green", fontWeight:"bold"}}>{props.project.language}</p> }
+                { props.project.language === "Prolog" && <p style={{fontSize:"20px", position:"relative", margin:"auto", color:"purple", fontWeight:"bold"}}>{props.project.language}</p> }
+                { props.project.language === "Scheme" && <p style={{fontSize:"20px", position:"relative", margin:"auto", color:"orange", fontWeight:"bold"}}>{props.project.language}</p> }
+              </div>
             </div>
-            <div style={{display:"flex", width:"10%", height:"100%", backgroundColor:"lightgreen"}}>
+            <div style={{display:"flex", width:"10%", height:"100%", backgroundColor:"white"}}>
               <a href={props.project.url}><img src="/github-logo.png" alt="image" style={{width:"100%"}} /></a>
             </div>
           </div>
-          <div style={{width:"100%", height:"75%", backgroundColor:"lightblue"}}
+          <div style={{width:"100%", height:"75%", backgroundColor:"#808080"}}
             onClick={() => setModalOpen(!modalOpen)}
           >
-            <p style={{fontSize:"24px", padding:"20px"}}>{props.project.excerpt}</p>
+            <p style={{fontSize:"24px", padding:"20px", color:"white"}}>{props.project.excerpt}</p>
           </div>
         </div>
         <Modal
