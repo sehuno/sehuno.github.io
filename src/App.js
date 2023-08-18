@@ -19,7 +19,7 @@ function App() {
           </motion.div>
         }
       </AnimatePresence>
-      <div onClick={() => setIsOpen(false)} style={{position:"absolute",display:"flex", flexDirection:"column", width:"100%", height:"100%"}}>
+      <div style={{position:"absolute",display:"flex", flexDirection:"column", width:"100%", height:"100%"}}>
         <AnimatePresence>
           { !isOpen && <motion.div
             style={{display:"flex",backgroundColor:"lightgrey", width:"100%", height:"50%"}}
@@ -120,6 +120,11 @@ function Menu() {
     setPhotographyModalOpen(false)
   }
 
+  function projectsExit() {
+    reset()
+    setProjectsClicked(false)
+  }
+
   return(
     <div style={{width:"100%", height:"100%"}}>
       <div
@@ -186,7 +191,7 @@ function Menu() {
           <Photo></Photo>
         </Modal>
       </div>
-      { projectsClicked && <Projects></Projects> }
+      { projectsClicked && <Projects projectsExit={projectsExit}></Projects> }
     </div>
   )
 }
@@ -227,9 +232,10 @@ const projectsList = [
   { id: 9, title:"Twisted Proxy Herd", language:"Python", url:"https://github.com/sehuno/CS131/blob/master/hw/project/project_spec.pdf", excerpt:"A python server herd application utilizing Twisted, an event-driven networking framework, which accepts TCP connections that emulate client mobile devices in order to serve location information."},
 ]
 
-function Projects() {
+function Projects(props) {
   return(
     <motion.div
+      onClick={()=> props.projectsExit()}
       initial={{opacity:0 }}
       animate={{opacity:1 }}
       transition={{duration: 3}}
@@ -263,15 +269,21 @@ const projectModalStyles = {
 function Project(props) {
   const [modalOpen, setModalOpen] = useState(false)
 
+  const handleChildElementClick = (e) => {
+    e.stopPropagation()
+    setModalOpen(!modalOpen)
+  }
+
+
   return(
     <Fade bottom delay={1000}>
       <div
-        style={{width:"100%", height:"250px", marginBottom:"50px", boxShadow: "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px", borderRadius:"10px"}}
+        style={{width:"1000px", height:"250px", marginBottom:"50px", boxShadow: "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px", borderRadius:"10px"}}
       >
         <div style={{display:"flex", flexDirection:"column", width:"100%", height:"100%"}}>
           <div style={{display:"flex", width:"100%", height:"25%", backgroundColor:"lightgrey"}}>
             <div style={{display:"flex", width:"70%", height:"100%", backgroundColor:"#c8c9ac"}}
-              onClick={() => setModalOpen(!modalOpen)}
+              onClick={(e) => handleChildElementClick(e)}
             >
               <p style={{fontSize:"36px", position:"absolute", marginTop:"10px", marginLeft:"10px", color:"#787867"}}>{props.project.title}</p>
             </div>
@@ -290,7 +302,7 @@ function Project(props) {
             </div>
           </div>
           <div style={{width:"100%", height:"75%", backgroundColor:"#808080"}}
-            onClick={() => setModalOpen(!modalOpen)}
+            onClick={(e) => handleChildElementClick(e)}
           >
             <p style={{fontSize:"24px", padding:"20px", color:"white"}}>{props.project.excerpt}</p>
           </div>
