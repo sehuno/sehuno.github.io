@@ -348,25 +348,25 @@ function AboutMe(props) {
             <div style={{fontSize:"18px", width:"80%", height:"35%", margin:"auto"}}>Hello! My name is Sehun, pronounced say-hoon, eric oh, a college student currently studying computer science. In my free time, I enjoy coding, taking photos, dancing, and browsing the endless stream of cat photos, otherwise known as the internet. </div>
             <div style={{width:"100%", height:"25%", display:"flex", flexDirection:"column"}}>
               <div style={{width:"100%", height:"50%", display:"flex", flexDirection:"row"}}>
-                <div style={{width:"33.3333%", height:"100%"}}>
-                  <a href="https://www.designspiration.com/save/5597548604555/"><img src="/linkedin-logo.png" alt="image" style={{height:"70%", marginLeft:"10%", filter: "brightness(0) invert(1)"}} /></a>
+                <div style={{width:"33.3333%", height:"100%", marginLeft:"15px"}}>
+                  <a href="https://www.linkedin.com/in/sehun-eric-oh-b400ba34/"><img src="/linkedin-logo.png" alt="image" style={{height:"60%", marginLeft:"10%", filter: "brightness(0) invert(1)"}} /></a>
                 </div>
-                <div style={{width:"33.3333%", height:"100%"}}>
-                  <a href="https://www.designspiration.com/save/5597548604555/"><img src="/instagram-logo.png" alt="image" style={{height:"70%", marginLeft:"10%", filter: "brightness(0) invert(1)"}} /></a>
+                <div style={{width:"33.3333%", height:"100%", marginLeft:"15px"}}>
+                  <a href="https://www.instagram.com/atredama"><img src="/instagram-logo.png" alt="image" style={{height:"60%", marginLeft:"10%", filter: "brightness(0) invert(1)"}} /></a>
                 </div>
-                <div style={{width:"33.3333%", height:"100%"}}>
-                  <a href="https://www.designspiration.com/save/5597548604555/"><img src="/flickr-logo.png" alt="image" style={{height:"70%", marginLeft:"10%", filter: "brightness(0) invert(1)"}} /></a>
+                <div style={{width:"33.3333%", height:"100%", marginLeft:"15px"}}>
+                  <a href="https://www.flickr.com/ohfasho"><img src="/flickr-logo.png" alt="image" style={{height:"60%", marginLeft:"10%", filter: "brightness(0) invert(1)"}} /></a>
                 </div>
               </div>
               <div style={{width:"100%", height:"50%", display:"flex", flexDirection:"row"}}>
-                <div style={{width:"33.3333%", height:"100%"}}>
-                  <a href="https://www.designspiration.com/save/5597548604555/"><img src="/tumblr-logo.png" alt="image" style={{height:"70%", marginLeft:"10%", filter: "brightness(0) invert(1)"}} /></a>
+                <div style={{width:"33.3333%", height:"100%", marginLeft:"15px"}}>
+                  <a href="https://atredama.tumblr.com/"><img src="/tumblr-logo.png" alt="image" style={{height:"60%", marginLeft:"10%", filter: "brightness(0) invert(1)"}} /></a>
                 </div>
-                <div style={{width:"33.3333%", height:"100%"}}>
-                  <a href="https://www.designspiration.com/save/5597548604555/"><img src="/soundcloud-logo.png" alt="image" style={{height:"70%", marginLeft:"10%", filter: "brightness(0) invert(1)"}} /></a>
+                <div style={{width:"33.3333%", height:"100%", marginLeft:"15px"}}>
+                  <a href="https://soundcloud.com/atredama"><img src="/soundcloud-logo.png" alt="image" style={{height:"60%", marginLeft:"10%", filter: "brightness(0) invert(1)"}} /></a>
                 </div>
-                <div style={{width:"33.3333%", height:"100%"}}>
-                  <a href="https://www.designspiration.com/save/5597548604555/"><img src="/github-small-logo.png" alt="image" style={{height:"70%", marginLeft:"10%", filter: "brightness(0) invert(1)"}} /></a>
+                <div style={{width:"33.3333%", height:"100%", marginLeft:"15px"}}>
+                  <a href="https://github.com/sehuno"><img src="/github-small-logo.png" alt="image" style={{height:"60%", marginLeft:"10%", filter: "brightness(0) invert(1)"}} /></a>
                 </div>
               </div>
             </div>
