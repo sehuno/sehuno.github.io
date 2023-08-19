@@ -338,8 +338,40 @@ function AboutMe(props) {
       </Fade>
       <Zoom delay={1500} left>
         <div style={{position:"absolute", display:"flex", flexDirection:"row", margin:"auto", width:"60%", height:"70%", top:"15%", left:"20%"}}>
-          <div style={{width:"40%", height:"100%", background: "linear-gradient(180deg, rgba(225,226,38,1) 0%, rgba(213,100,25,1) 100%)"}}></div>
-          <div style={{width:"60%", height:"100%"}}>
+          <div style={{width:"40%", height:"100%", display:"flex", flexDirection:"column", color:"white", background: "linear-gradient(180deg, rgba(225,226,38,1) 0%, rgba(213,100,25,1) 100%)"}}>
+            <div style={{height:"10%",width:"90%", fontSize:"48px", margin:"auto", marginTop:"10px"}}>eric séhun oh</div>
+            <div style={{height:"20%", width:"100%", marginTop:"30px"}}>
+              <p style={{width:"70%", margin:"auto", textAlign:"center", fontSize:"20px"}}>Senior Full Stack Developer</p>
+              <p style={{width:"70%", margin:"auto", textAlign:"center", fontSize:"20px", marginTop:"10px"}}>San José, CA</p>
+            </div>
+            <div style={{width:"60%", height:"10%", margin:"auto"}}>coding is cool</div>
+            <div style={{fontSize:"18px", width:"80%", height:"35%", margin:"auto"}}>Hello! My name is Sehun, pronounced say-hoon, eric oh, a college student currently studying computer science. In my free time, I enjoy coding, taking photos, dancing, and browsing the endless stream of cat photos, otherwise known as the internet. </div>
+            <div style={{width:"100%", height:"25%", display:"flex", flexDirection:"column"}}>
+              <div style={{width:"100%", height:"50%", display:"flex", flexDirection:"row"}}>
+                <div style={{width:"33.3333%", height:"100%"}}>
+                  <a href="https://www.designspiration.com/save/5597548604555/"><img src="/linkedin-logo.png" alt="image" style={{height:"70%", marginLeft:"10%", filter: "brightness(0) invert(1)"}} /></a>
+                </div>
+                <div style={{width:"33.3333%", height:"100%"}}>
+                  <a href="https://www.designspiration.com/save/5597548604555/"><img src="/instagram-logo.png" alt="image" style={{height:"70%", marginLeft:"10%", filter: "brightness(0) invert(1)"}} /></a>
+                </div>
+                <div style={{width:"33.3333%", height:"100%"}}>
+                  <a href="https://www.designspiration.com/save/5597548604555/"><img src="/flickr-logo.png" alt="image" style={{height:"70%", marginLeft:"10%", filter: "brightness(0) invert(1)"}} /></a>
+                </div>
+              </div>
+              <div style={{width:"100%", height:"50%", display:"flex", flexDirection:"row"}}>
+                <div style={{width:"33.3333%", height:"100%"}}>
+                  <a href="https://www.designspiration.com/save/5597548604555/"><img src="/tumblr-logo.png" alt="image" style={{height:"70%", marginLeft:"10%", filter: "brightness(0) invert(1)"}} /></a>
+                </div>
+                <div style={{width:"33.3333%", height:"100%"}}>
+                  <a href="https://www.designspiration.com/save/5597548604555/"><img src="/soundcloud-logo.png" alt="image" style={{height:"70%", marginLeft:"10%", filter: "brightness(0) invert(1)"}} /></a>
+                </div>
+                <div style={{width:"33.3333%", height:"100%"}}>
+                  <a href="https://www.designspiration.com/save/5597548604555/"><img src="/github-small-logo.png" alt="image" style={{height:"70%", marginLeft:"10%", filter: "brightness(0) invert(1)"}} /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style={{width:"100%", height:"100%"}}>
             <img src="/profile.jpg" alt="image" style={{height:"100%"}} />
           </div>
         </div>
