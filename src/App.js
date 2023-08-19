@@ -239,7 +239,7 @@ function Projects(props) {
       initial={{opacity:0 }}
       animate={{opacity:1 }}
       transition={{duration: 3}}
-      style={{position:"relative", width:"1200px", height:"1000px", margin:"auto", marginTop:"40px"}}
+      style={{position:"relative", width:"1200px", height:"1000px", margin:"auto", marginTop:"40px", overflow:"scroll"}}
     >
       {projectsList.map((project) => {
         return (
@@ -289,12 +289,12 @@ function Project(props) {
             </div>
             <div style={{display:"flex", width:"20%", height:"100%", backgroundColor:"#E0E0E0"}}>
               <div style={{position:"relative", margin:"auto", padding:"10px", borderRadius:"20px"}}>
-                { props.project.language === "Python" && <p style={{fontSize:"20px", position:"relative", margin:"auto", color:"blue", fontWeight:"bold"}}>{props.project.language}</p> }
-                { props.project.language === "OCaml" && <p style={{fontSize:"20px", position:"relative", margin:"auto", color:"red", fontWeight:"bold"}}>{props.project.language}</p> }
-                { props.project.language === "C" && <p style={{fontSize:"20px", position:"relative", margin:"auto", color:"yellow", fontWeight:"bold"}}>{props.project.language}</p> }
-                { props.project.language === "Java" && <p style={{fontSize:"20px", position:"relative", margin:"auto", color:"green", fontWeight:"bold"}}>{props.project.language}</p> }
-                { props.project.language === "Prolog" && <p style={{fontSize:"20px", position:"relative", margin:"auto", color:"purple", fontWeight:"bold"}}>{props.project.language}</p> }
-                { props.project.language === "Scheme" && <p style={{fontSize:"20px", position:"relative", margin:"auto", color:"orange", fontWeight:"bold"}}>{props.project.language}</p> }
+                { props.project.language === "Python" && <img src="/python-logo.png" alt="image" style={{width:"70%"}} />}
+                { props.project.language === "OCaml" && <img src="/ocaml-logo.png" alt="image" style={{width:"80%"}} /> }
+                { props.project.language === "C" && <img src="/c-logo.png" alt="image" style={{width:"20%"}} /> }
+                { props.project.language === "Java" && <img src="/java-logo.png" alt="image" style={{width:"45%"}} /> }
+                { props.project.language === "Prolog" && <img src="/prolog-logo.png" alt="image" style={{width:"70%"}} /> }
+                { props.project.language === "Scheme" && <img src="/scheme-logo.png" alt="image" style={{width:"30%"}} /> }
               </div>
             </div>
             <div style={{display:"flex", width:"10%", height:"100%", backgroundColor:"white"}}>
