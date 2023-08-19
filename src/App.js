@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import Modal from 'react-modal';
 import HorizontalScroll from 'react-scroll-horizontal'
 import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -125,6 +126,11 @@ function Menu() {
     setProjectsClicked(false)
   }
 
+  function aboutMeExit() {
+    reset()
+    setAboutMeClicked(false)
+  }
+
   return(
     <div style={{width:"100%", height:"100%"}}>
       <div
@@ -192,6 +198,7 @@ function Menu() {
         </Modal>
       </div>
       { projectsClicked && <Projects projectsExit={projectsExit}></Projects> }
+      { aboutMeClicked && <AboutMe aboutMeExit={aboutMeExit}></AboutMe>}
     </div>
   )
 }
@@ -318,5 +325,29 @@ function Project(props) {
     </Fade>
   )
 }
+
+function AboutMe(props) {
+  return(
+    <div style={{position:"absolute", width:"100vw", height:"100vh"}}
+          onClick={props.aboutMeExit}
+    >
+      <Fade delay={1000}>
+        <div style={{width:"100%", height:"100%",overflow:"hidden"}}>
+          <img src="/jerry-wang-Hqf58s2C1lg-unsplash.jpeg" style={{width:"100%",opacity:"0.8"}}/>
+        </div>
+      </Fade>
+      <Zoom delay={1500} left>
+        <div style={{position:"absolute", display:"flex", flexDirection:"row", margin:"auto", width:"60%", height:"70%", top:"15%", left:"20%"}}>
+          <div style={{width:"40%", height:"100%", background: "linear-gradient(180deg, rgba(225,226,38,1) 0%, rgba(213,100,25,1) 100%)"}}></div>
+          <div style={{width:"60%", height:"100%"}}>
+            <img src="/profile.jpg" alt="image" style={{height:"100%"}} />
+          </div>
+        </div>
+      </Zoom>
+    </div>
+  )
+}
+
+  <div style={{position:"absolute", zIndex:"10", width:"100%", height:"100%", backgroundColor:"lightgreen"}}></div>
 
 export default App;
