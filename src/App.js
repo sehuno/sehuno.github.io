@@ -327,6 +327,18 @@ function Project(props) {
   )
 }
 
+const textItems = [
+  {id: 0, text:"coding is cool"},
+  {id: 1, text:"Proverbs 16:9, 23:17"},
+  {id: 2 , text:"i enjoy thrifting"},
+  {id: 3, text:"coffee & cigs"},
+  {id: 4, text:"lover of chopin's nocturnes"},
+  {id: 5, text: "would like to work in cybersecurity"},
+  {id: 6, text:"or even pursue a career in webdev"},
+  {id: 7, text:"i sometimes make music on ableton"},
+  {id: 8, text:"i n f j"}
+]
+
 function AboutMe(props) {
   return(
     <div style={{position:"absolute", width:"100vw", height:"100vh"}}
@@ -347,7 +359,11 @@ function AboutMe(props) {
                 <p style={{width:"70%", margin:"auto", textAlign:"center", fontSize:"20px", marginTop:"10px"}}>San José, CA</p>
               </div>
             </Zoom>
-            <Fade left delay={3000}><div style={{width:"60%", height:"10%", margin:"auto"}}>coding is cool</div></Fade>
+            <Fade left delay={3000}>
+              <div style={{width:"60%", height:"10%", margin:"auto"}}>
+                i n f j
+              </div>
+            </Fade>
             <Fade bottom delay={3500}><div style={{fontSize:"18px", width:"80%", height:"35%", margin:"auto"}}>Hello! My name is Sehun, pronounced say-hoon, eric oh, a college student currently studying computer science. In my free time, I enjoy coding, taking photos, dancing, and browsing the endless stream of cat photos, otherwise known as the internet. </div></Fade>
             <Fade left cascade delay={4000}><div style={{width:"100%", height:"25%", display:"flex", flexDirection:"column"}}>
               <div style={{width:"100%", height:"50%", display:"flex", flexDirection:"row"}}>
@@ -383,7 +399,5 @@ function AboutMe(props) {
     </div>
   )
 }
-
-  <div style={{position:"absolute", zIndex:"10", width:"100%", height:"100%", backgroundColor:"lightgreen"}}></div>
 
 export default App;
