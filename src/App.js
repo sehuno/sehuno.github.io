@@ -7,7 +7,7 @@ import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import Pulse from 'react-reveal/Pulse';
 import { BsArrowReturnRight } from 'react-icons/bs';
-import { dreamsText } from './dreams.js'
+import { dreamsText, justiceText, perspectiveText } from './text.js'
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -404,12 +404,9 @@ function AboutMe(props) {
 }
 
 const blogPosts = [
-  {id: 1, title:"Dreams", text: dreamsText},
-  {id: 2, title:"test title", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
-  {id: 3, title:"test title", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
-  {id: 4, title:"test title", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
-  {id: 5, title:"test title", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
-  {id: 6, title:"test title", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+  {id: 1, title:"Dreams", text: dreamsText, date:"08.22.2023", img:"https://www.pixel4k.com/wp-content/uploads/2018/03/Equinox%20Sun%20Moon%20Dream%204K5032219249.jpg"},
+  {id: 2, title:"Justice", text: justiceText, date:"08.22.2023", img:"https://naacp.org/sites/default/files/styles/embed_image_c/public/images/tingey-injury-law-firm-DZpc4UY8ZtY-unsplash.jpg?itok=PN90k7Vi"},
+  {id: 3, title:"Perspective", text: perspectiveText, date:"08.22.2023", img:"https://upload.wikimedia.org/wikipedia/commons/4/4f/Staircase_perspective.jpg"},
 ]
 
 function Blog(props) {
@@ -457,12 +454,12 @@ function BlogPost(props) {
       <div style={{width:"100%", height:"30%", fontSize:"100px", color:"lightgrey"}}>0{props.blogPost.id}</div>
       <div style={{width:"100%", height:"70%", backgroundColor:"lightgrey", borderRadius:"10px", boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"}}>
         <div style={{width:"85%", height:"85%", margin:"auto", marginTop:"1.2rem", display:"flex", flexDirection:"row", backgroundColor:"white"}}>
-          <div style={{width:"50%", height:"100%"}}>
-            <img style={{height:"100%"}} src="https://ih1.redbubble.net/image.15929520.8659/raf,750x1000,075,t,heather_grey_lightweight_raglan_sweatshirt.jpg"/>
+          <div style={{width:"50%", height:"100%", position:"relative", overflow:"hidden"}}>
+            <img style={{height:"100%", position:"absolute", left:"-50%"}} src={props.blogPost.img}/>
           </div>
           <div style={{width:"50%", height:"100%", display:"flex", flexDirection:"column"}}>
-            <div style={{width:"100%", height:"85%", fontSize:"36px", textAlign:"center"}}>{props.blogPost.title}</div>
-            <div onClick={(e) => handleChildElementClick(e)} style={{width:"100%", height:"15%", marginLeft:"85px"}}><BsArrowReturnRight />See More</div>
+            <div style={{width:"100%", height:"85%", fontSize:"30px", textAlign:"center", paddingTop:"70px"}}>{props.blogPost.title}</div>
+            <div onClick={(e) => handleChildElementClick(e)} style={{width:"100%", height:"15%", marginLeft:"85px", paddingBottom:"15px"}}><BsArrowReturnRight />See More</div>
           </div>
         </div>
       </div>
@@ -473,8 +470,8 @@ function BlogPost(props) {
         style={blogModalStyles}
       >
         <div style={{width:"100%", height:"100%", display:"flex", flexDirection:"row"}}>
-          <div style={{width:"45%", height:"100%"}}>
-            <img style={{height:"100%", width:"100%"}} src="https://ih1.redbubble.net/image.15929520.8659/raf,750x1000,075,t,heather_grey_lightweight_raglan_sweatshirt.jpg"/>
+          <div style={{width:"45%", height:"100%", position:"relative", overflow:"hidden"}}>
+            <img style={{height:"100%", left:"-50%", position:"absolute"}} src={props.blogPost.img}/>
           </div>
           <div style={{width:"55%", height:"100%", whiteSpace:"pre-wrap"}}>
             <div style={{width:"90%", height:"80%", margin:"auto", marginTop:"70px", borderTop:"5px solid lightgrey", borderBottom:"5px solid lightgrey"}}>
