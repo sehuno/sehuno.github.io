@@ -455,7 +455,7 @@ function BlogPost(props) {
       <div style={{width:"100%", height:"70%", backgroundColor:"lightgrey", borderRadius:"10px", boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"}}>
         <div style={{width:"85%", height:"85%", margin:"auto", marginTop:"1.2rem", display:"flex", flexDirection:"row", backgroundColor:"white"}}>
           <div style={{width:"50%", height:"100%", position:"relative", overflow:"hidden"}}>
-            <img style={{height:"100%", position:"absolute", left:"-50%"}} src={props.blogPost.img}/>
+            <img style={{height:"100%", position:"absolute", left:"-52%"}} src={props.blogPost.img}/>
           </div>
           <div style={{width:"50%", height:"100%", display:"flex", flexDirection:"column"}}>
             <div style={{width:"100%", height:"85%", fontSize:"30px", textAlign:"center", paddingTop:"70px"}}>{props.blogPost.title}</div>
