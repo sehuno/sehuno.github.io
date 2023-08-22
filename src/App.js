@@ -7,6 +7,7 @@ import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import Pulse from 'react-reveal/Pulse';
 import { BsArrowReturnRight } from 'react-icons/bs';
+import { dreamsText } from './dreams.js'
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -403,7 +404,7 @@ function AboutMe(props) {
 }
 
 const blogPosts = [
-  {id: 1, title:"test title", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+  {id: 1, title:"Dreams", text: dreamsText},
   {id: 2, title:"test title", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
   {id: 3, title:"test title", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
   {id: 4, title:"test title", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
@@ -460,8 +461,8 @@ function BlogPost(props) {
             <img style={{height:"100%"}} src="https://ih1.redbubble.net/image.15929520.8659/raf,750x1000,075,t,heather_grey_lightweight_raglan_sweatshirt.jpg"/>
           </div>
           <div style={{width:"50%", height:"100%", display:"flex", flexDirection:"column"}}>
-            <div style={{width:"100%", height:"80%", fontSize:"36px", textAlign:"center"}}>{props.blogPost.title}</div>
-            <div onClick={(e) => handleChildElementClick(e)} style={{width:"100%", height:"20%", marginLeft:"5rem", marginTop:"3.5rem"}}><BsArrowReturnRight />See More</div>
+            <div style={{width:"100%", height:"85%", fontSize:"36px", textAlign:"center"}}>{props.blogPost.title}</div>
+            <div onClick={(e) => handleChildElementClick(e)} style={{width:"100%", height:"15%", marginLeft:"85px"}}><BsArrowReturnRight />See More</div>
           </div>
         </div>
       </div>
@@ -472,10 +473,20 @@ function BlogPost(props) {
         style={blogModalStyles}
       >
         <div style={{width:"100%", height:"100%", display:"flex", flexDirection:"row"}}>
-          <div style={{width:"40%", height:"100%"}}>
+          <div style={{width:"45%", height:"100%"}}>
             <img style={{height:"100%", width:"100%"}} src="https://ih1.redbubble.net/image.15929520.8659/raf,750x1000,075,t,heather_grey_lightweight_raglan_sweatshirt.jpg"/>
           </div>
-          <div style={{width:"60%", height:"100%"}}></div>
+          <div style={{width:"55%", height:"100%", whiteSpace:"pre-wrap"}}>
+            <div style={{width:"90%", height:"80%", margin:"auto", marginTop:"70px", borderTop:"5px solid lightgrey", borderBottom:"5px solid lightgrey"}}>
+              <div style={{width:"85%", height:"85%", margin:"auto", marginTop:"60px", display:"flex", flexDirection:"column"}}>
+                <div style={{width:"100%", height:"10%", display:"flex", flexDirection:"row", borderBottom:"5px solid lightgrey"}}>
+                  <Fade left><div style={{fontSize:"48px", marginRight:"10px"}}>{props.blogPost.title}</div></Fade>
+                  <Fade top><div style={{fontSize:"24px"}}>8.22.2023</div></Fade>
+                </div>
+                <Fade bottom><div className="blog-text" style={{width:"100%", height:"90%", fontSize:"18px", overflow:"scroll", marginTop:"40px"}}>{props.blogPost.text}</div></Fade>
+              </div>
+            </div>
+          </div>
         </div>
       </Modal>
     </div>
