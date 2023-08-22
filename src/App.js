@@ -6,6 +6,7 @@ import HorizontalScroll from 'react-scroll-horizontal'
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import Pulse from 'react-reveal/Pulse';
+import { BsArrowReturnRight } from 'react-icons/bs';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -132,6 +133,11 @@ function Menu() {
     setAboutMeClicked(false)
   }
 
+  function blogExit() {
+    reset()
+    setBlogClicked(false)
+  }
+
   return(
     <div style={{width:"100%", height:"100%"}}>
       <div
@@ -200,6 +206,7 @@ function Menu() {
       </div>
       { projectsClicked && <Projects projectsExit={projectsExit}></Projects> }
       { aboutMeClicked && <AboutMe aboutMeExit={aboutMeExit}></AboutMe>}
+      { blogClicked && <Blog blogExit={blogExit}></Blog>}
     </div>
   )
 }
@@ -396,6 +403,50 @@ function AboutMe(props) {
           </div>
         </div>
       </Zoom>
+    </div>
+  )
+}
+
+const blogPosts = [
+  {id: 1, title:"test title", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+  {id: 2, title:"test title", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+  {id: 3, title:"test title", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+  {id: 4, title:"test title", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+  {id: 5, title:"test title", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+  {id: 6, title:"test title", text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+]
+
+function Blog(props) {
+  return(
+    <Fade delay={1000}>
+      <div style={{position:"absolute", width:"100vw", height:"100vh"}} onClick={props.blogExit}>
+        <div style={{width:"90%", height:"80%", margin:"auto", marginTop:"4.5rem", display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
+          {blogPosts.map((blogPost) => {
+            return (
+              <BlogPost blogPost={blogPost}></BlogPost>
+            );
+          })}
+        </div>
+      </div>
+    </Fade>
+  )
+}
+
+function BlogPost(props) {
+  return(
+    <div style={{display:"flex", flexDirection:"column", width:"25%", margin:"40px",height:"350px"}}>
+      <div style={{width:"100%", height:"30%", fontSize:"100px", color:"lightgrey"}}>0{props.blogPost.id}</div>
+      <div style={{width:"100%", height:"70%", backgroundColor:"lightgrey", borderRadius:"10px", boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"}}>
+        <div style={{width:"85%", height:"85%", margin:"auto", marginTop:"1.2rem", display:"flex", flexDirection:"row", backgroundColor:"white"}}>
+          <div style={{width:"50%", height:"100%"}}>
+            <img style={{height:"100%"}} src="https://ih1.redbubble.net/image.15929520.8659/raf,750x1000,075,t,heather_grey_lightweight_raglan_sweatshirt.jpg"/>
+          </div>
+          <div style={{width:"50%", height:"100%", display:"flex", flexDirection:"column"}}>
+            <div style={{width:"100%", height:"80%", fontSize:"36px", textAlign:"center"}}>{props.blogPost.title}</div>
+            <div style={{width:"100%", height:"20%", marginLeft:"5rem", marginTop:"3.5rem"}}><BsArrowReturnRight />See More</div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
