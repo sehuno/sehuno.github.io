@@ -68,10 +68,6 @@ const photoModalStyles = {
   }
 };
 
-const projects = [
-  {}
-]
-
 function Menu() {
   const [aboutMeOpen, setAboutMeOpen] = useState(true)
   const [blogOpen, setBlogOpen] = useState(true)
@@ -289,7 +285,6 @@ function Project(props) {
     setModalOpen(!modalOpen)
   }
 
-
   return(
     <Fade bottom delay={1000}>
       <div
@@ -418,7 +413,7 @@ const blogPosts = [
 
 function Blog(props) {
   return(
-    <Fade delay={1000}>
+    <Fade delay={1000} left>
       <div style={{position:"absolute", width:"100vw", height:"100vh"}} onClick={props.blogExit}>
         <div style={{width:"90%", height:"80%", margin:"auto", marginTop:"4.5rem", display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
           {blogPosts.map((blogPost) => {
@@ -432,7 +427,30 @@ function Blog(props) {
   )
 }
 
+const blogModalStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    width: '1400px',
+    height: '1000px',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    padding: 'none',
+    zIndex: '15',
+    boxShadow: 'rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px',
+  }
+};
+
 function BlogPost(props) {
+  const [modalOpen, setModalOpen] = useState(false)
+
+  const handleChildElementClick = (e) => {
+    e.stopPropagation()
+    setModalOpen(true)
+  }
+
   return(
     <div style={{display:"flex", flexDirection:"column", width:"25%", margin:"40px",height:"350px"}}>
       <div style={{width:"100%", height:"30%", fontSize:"100px", color:"lightgrey"}}>0{props.blogPost.id}</div>
@@ -443,10 +461,23 @@ function BlogPost(props) {
           </div>
           <div style={{width:"50%", height:"100%", display:"flex", flexDirection:"column"}}>
             <div style={{width:"100%", height:"80%", fontSize:"36px", textAlign:"center"}}>{props.blogPost.title}</div>
-            <div style={{width:"100%", height:"20%", marginLeft:"5rem", marginTop:"3.5rem"}}><BsArrowReturnRight />See More</div>
+            <div onClick={(e) => handleChildElementClick(e)} style={{width:"100%", height:"20%", marginLeft:"5rem", marginTop:"3.5rem"}}><BsArrowReturnRight />See More</div>
           </div>
         </div>
       </div>
+      <Modal
+        closeTimeoutMS={600}
+        onRequestClose={() => setModalOpen(false)}
+        isOpen={modalOpen}
+        style={blogModalStyles}
+      >
+        <div style={{width:"100%", height:"100%", display:"flex", flexDirection:"row"}}>
+          <div style={{width:"40%", height:"100%"}}>
+            <img style={{height:"100%", width:"100%"}} src="https://ih1.redbubble.net/image.15929520.8659/raf,750x1000,075,t,heather_grey_lightweight_raglan_sweatshirt.jpg"/>
+          </div>
+          <div style={{width:"60%", height:"100%"}}></div>
+        </div>
+      </Modal>
     </div>
   )
 }
