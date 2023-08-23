@@ -246,26 +246,25 @@ const projectsList = [
 
 function Projects(props) {
   return(
-    <motion.div
+    <div
       onClick={()=> props.projectsExit()}
-      initial={{opacity:0 }}
-      animate={{opacity:1 }}
-      transition={{duration: 3}}
-      style={{position:"relative", width:"1200px", height:"1000px", margin:"auto", marginTop:"40px", overflow:"scroll"}}
+      style={{position:"relative", width:"100vw", height:"100vh", margin:"auto", marginTop:"40px", overflow:"scroll", marginLeft:"250px"}}
     >
-      {projectsList.map((project) => {
-        return (
-          <Project project={project}></Project>
-        );
-      })}
-    </motion.div>
+      <div style={{width:"80%", height:"90%", margin:"auto"}}>
+        {projectsList.map((project) => {
+          return (
+            <Project project={project}></Project>
+          );
+        })}
+      </div>
+    </div>
   )
 }
 
 const projectModalStyles = {
   content: {
     top: '50%',
-    left: '50%',
+    left: '43.5%',
     width: '1000px',
     height: '1200px',
     right: 'auto',
@@ -320,7 +319,7 @@ function Project(props) {
         </div>
         <Modal
           closeTimeoutMS={600}
-          onRequestClose={() => setModalOpen(false)}
+          onRequestClose={(e) => handleChildElementClick(e)}
           isOpen={modalOpen}
           style={projectModalStyles}
         >
@@ -478,7 +477,7 @@ function BlogPost(props) {
               <div style={{width:"85%", height:"85%", margin:"auto", marginTop:"60px", display:"flex", flexDirection:"column"}}>
                 <div style={{width:"100%", height:"10%", display:"flex", flexDirection:"row", borderBottom:"5px solid lightgrey"}}>
                   <Fade left><div style={{fontSize:"48px", marginRight:"10px"}}>{props.blogPost.title}</div></Fade>
-                  <Fade top><div style={{fontSize:"24px"}}>8.22.2023</div></Fade>
+                  <Fade top><div style={{fontSize:"24px"}}>{props.blogPost.date}</div></Fade>
                 </div>
                 <Fade bottom><div className="blog-text" style={{width:"100%", height:"90%", fontSize:"18px", overflow:"scroll", marginTop:"40px"}}>{props.blogPost.text}</div></Fade>
               </div>
