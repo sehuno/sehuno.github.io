@@ -1,6 +1,6 @@
 import './App.css';
 import React, {Component, useState } from 'react';
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion/dist/framer-motion";
 import Modal from 'react-modal';
 import HorizontalScroll from 'react-scroll-horizontal'
 import Fade from 'react-reveal/Fade';
@@ -299,12 +299,12 @@ function Project(props) {
             </div>
             <div style={{display:"flex", width:"20%", height:"100%", backgroundColor:"#E0E0E0"}}>
               <div style={{position:"relative", margin:"auto", padding:"10px", borderRadius:"20px"}}>
-                { props.project.language === "Python" && <img src="/python-logo.png" alt="image" style={{width:"70%"}} />}
-                { props.project.language === "OCaml" && <img src="/ocaml-logo.png" alt="image" style={{width:"80%"}} /> }
-                { props.project.language === "C" && <img src="/c-logo.png" alt="image" style={{width:"20%"}} /> }
-                { props.project.language === "Java" && <img src="/java-logo.png" alt="image" style={{width:"45%"}} /> }
-                { props.project.language === "Prolog" && <img src="/prolog-logo.png" alt="image" style={{width:"70%"}} /> }
-                { props.project.language === "Scheme" && <img src="/scheme-logo.png" alt="image" style={{width:"30%"}} /> }
+                { props.project.language === "Python" && <img src="/python-logo.png" alt="image" style={{width:"70%", marginLeft:"25px"}} />}
+                { props.project.language === "OCaml" && <img src="/ocaml-logo.png" alt="image" style={{width:"80%", marginLeft:"10px"}} /> }
+                { props.project.language === "C" && <img src="/c-logo.png" alt="image" style={{width:"20%", marginLeft:"67px"}} /> }
+                { props.project.language === "Java" && <img src="/java-logo.png" alt="image" style={{width:"45%", marginLeft:"50px"}} /> }
+                { props.project.language === "Prolog" && <img src="/prolog-logo.png" alt="image" style={{width:"70%", marginLeft:"23px"}} /> }
+                { props.project.language === "Scheme" && <img src="/scheme-logo.png" alt="image" style={{width:"30%", marginLeft:"57px"}} /> }
               </div>
             </div>
             <div style={{display:"flex", width:"10%", height:"100%", backgroundColor:"white"}}>
