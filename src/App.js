@@ -9,7 +9,7 @@ import Pulse from 'react-reveal/Pulse';
 import { BsArrowReturnRight } from 'react-icons/bs';
 import { dreamsText, justiceText, perspectiveText } from './text.js';
 import { Document, Page, pdfjs } from 'react-pdf';
-import { hw1_spec } from './hw1_spec.pdf'
+import hw1_spec from './hw1_spec.pdf'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -328,8 +328,8 @@ function Project(props) {
           style={projectModalStyles}
         >
           <div style={{width:"100%", height:"100%"}}>
-            <Document style={{width:"100%", height:"100%"}} file={{url:"https://s29.q4cdn.com/175625835/files/doc_downloads/test.pdf"}}>
-              <Page size="A4" pageNumber={1}/>
+            <Document file={hw1_spec}>
+              <Page pageNumber={1}/>
             </Document>
           </div>
         </Modal>
