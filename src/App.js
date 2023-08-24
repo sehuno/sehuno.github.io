@@ -1,13 +1,17 @@
 import './App.css';
 import React, {Component, useState } from 'react';
-import { motion, AnimatePresence } from "framer-motion/dist/framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Modal from 'react-modal';
 import HorizontalScroll from 'react-scroll-horizontal'
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import Pulse from 'react-reveal/Pulse';
 import { BsArrowReturnRight } from 'react-icons/bs';
-import { dreamsText, justiceText, perspectiveText } from './text.js'
+import { dreamsText, justiceText, perspectiveText } from './text.js';
+import { Document, Page, pdfjs } from 'react-pdf';
+import { hw1_spec } from './hw1_spec.pdf'
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -323,11 +327,20 @@ function Project(props) {
           isOpen={modalOpen}
           style={projectModalStyles}
         >
+          <div style={{width:"100%", height:"100%"}}>
+            <Document style={{width:"100%", height:"100%"}} file={{url:"https://s29.q4cdn.com/175625835/files/doc_downloads/test.pdf"}}>
+              <Page size="A4" pageNumber={1}/>
+            </Document>
+          </div>
         </Modal>
       </div>
     </Fade>
   )
 }
+
+// <Document file={{url:"https://s29.q4cdn.com/175625835/files/doc_downloads/test.pdf"}}>
+//   <Page pageNumber={1}/>
+// </Document>
 
 const textItems = [
   {id: 0, text:"coding is cool"},
