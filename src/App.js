@@ -18,6 +18,8 @@ import hw4_spec from './hw4_spec.pdf';
 import hw5_spec from './hw5_spec.pdf';
 import project_spec from './project_spec.pdf';
 import lab4 from './lab4.pdf';
+import audeo from './audeo.pdf';
+import rotd from './rotd.pdf';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -245,15 +247,15 @@ function Photo() {
 }
 
 const projectsList = [
-  { id: 1, title:"Audeo", language:"Python", numPages:3, url: "https://github.com/sehuno/Audeo", excerpt:"A python webscraping and web automation script that downloads a desired song and finds all related attributes such as album name, album artwork, and lyrics in order to create a complete mp3 file."},
-  { id: 2, title: "ROTD", language:"Python", numPages:3,url:"https://github.com/sehuno/ROTD", excerpt:"ROTD is a python script which provides a recap of the day by web scraping various websites."},
-  { id: 3, title:"Context Free Grammar Matching", data: hw1_spec, numPages:6, language:"OCaml", url:"https://github.com/sehuno/CS131/blob/master/hw/hw1/hw1.ml", excerpt:"A matcher function that inspects a given string of terminals to find a match for a prefix that corresponds to a nonterminal symbol of a grammar, and then checks whether the match is acceptable by testing whether a given acceptor succeeds on the corresponding derivation and suffix."},
-  { id: 4, title:"Edison Embedded Device", language:"C",data: lab4, numPages:5, url:"https://github.com/sehuno/CS111/blob/master/projects/lab4/lab4a.c", excerpt:"Intel Edison embedded device application that supports the use of a sensor to gather data and acts as a client using a predefined network protocol to interact with a remove server program." },
-  { id: 5, title: "Grammar Filters", language:"OCaml", data: hw2_spec, numPages:7,url:"https://github.com/sehuno/CS131/blob/master/hw/hw2/hw2.ml", excerpt:"Grammar filter function that filters out blind-alleys rules, that is, grammar rules for which it is impossible to derive a string of terminal symbols."},
-  { id: 6, title:"Java Synchronization", language:"Java", data: hw3_spec, numPages:4, url:"https://github.com/sehuno/CS131/tree/master/hw/hw3", excerpt:"A Java sequential-consistency-violating performance and reliability testing program that tests Null and Synchronized classes, using various values for the number of threads, number of swap transitions, size of the state array, and sum of the values in the state array, and characterizes the performance of the two classes. "},
-  { id: 7, title: "Listdiffs", language:"Scheme", data: hw5_spec, numPages:3,url:"https://github.com/sehuno/CS131/blob/master/hw/hw5/hw5.ss", excerpt:"Various Scheme procedures that act upon listdiffs, which are intended to be efficient representations for sublists."},
-  { id: 8, title:"Morse Code Recovery", language:"Prolog",numPages:4, data:hw4_spec, url:"https://github.com/sehuno/CS131/blob/master/hw/hw4/hw4.pl", excerpt:"Morse code recovery Prolog predicates that converts a list of 1s and 0s to the corresponding Morse characters and list of letters, interpreted according to the following Morse code table."},
-  { id: 9, title:"Twisted Proxy Herd", language:"Python", numPages:4, data:project_spec, url:"https://github.com/sehuno/CS131/blob/master/hw/project/server.py", excerpt:"A python server herd application utilizing Twisted, an event-driven networking framework, which accepts TCP connections that emulate client mobile devices in order to serve location information."},
+  { id: 1, title:"Audeo", language:"Python", numPages:2, data: audeo, url: "https://github.com/sehuno/Audeo", excerpt:"A python webscraping and web automation script that downloads a desired song and finds all related attributes such as album name, album artwork, and lyrics in order to create a complete mp3 file."},
+  { id: 2, title:"Context Free Grammar Matching", data: hw1_spec, numPages:6, language:"OCaml", url:"https://github.com/sehuno/CS131/blob/master/hw/hw1/hw1.ml", excerpt:"A matcher function that inspects a given string of terminals to find a match for a prefix that corresponds to a nonterminal symbol of a grammar, and then checks whether the match is acceptable by testing whether a given acceptor succeeds on the corresponding derivation and suffix."},
+  { id: 3, title:"Edison Embedded Device", language:"C",data: lab4, numPages:5, url:"https://github.com/sehuno/CS111/blob/master/projects/lab4/lab4a.c", excerpt:"Intel Edison embedded device application that supports the use of a sensor to gather data and acts as a client using a predefined network protocol to interact with a remove server program." },
+  { id: 4, title: "Grammar Filters", language:"OCaml", data: hw2_spec, numPages:7,url:"https://github.com/sehuno/CS131/blob/master/hw/hw2/hw2.ml", excerpt:"Grammar filter function that filters out blind-alleys rules, that is, grammar rules for which it is impossible to derive a string of terminal symbols."},
+  { id: 5, title:"Java Synchronization", language:"Java", data: hw3_spec, numPages:4, url:"https://github.com/sehuno/CS131/tree/master/hw/hw3", excerpt:"A Java sequential-consistency-violating performance and reliability testing program that tests Null and Synchronized classes, using various values for the number of threads, number of swap transitions, size of the state array, and sum of the values in the state array, and characterizes the performance of the two classes. "},
+  { id: 6, title: "Listdiffs", language:"Scheme", data: hw5_spec, numPages:3,url:"https://github.com/sehuno/CS131/blob/master/hw/hw5/hw5.ss", excerpt:"Various Scheme procedures that act upon listdiffs, which are intended to be efficient representations for sublists."},
+  { id: 7, title:"Morse Code Recovery", language:"Prolog",numPages:4, data:hw4_spec, url:"https://github.com/sehuno/CS131/blob/master/hw/hw4/hw4.pl", excerpt:"Morse code recovery Prolog predicates that converts a list of 1s and 0s to the corresponding Morse characters and list of letters, interpreted according to the following Morse code table."},
+  { id: 8, title:"Twisted Proxy Herd", language:"Python", numPages:4, data:project_spec, url:"https://github.com/sehuno/CS131/blob/master/hw/project/server.py", excerpt:"A python server herd application utilizing Twisted, an event-driven networking framework, which accepts TCP connections that emulate client mobile devices in order to serve location information."},
+  { id: 9, title: "ROTD", language:"Python", numPages:2, data: rotd, url:"https://github.com/sehuno/ROTD", excerpt:"ROTD is a python script which provides a recap of the day by web scraping various websites."},
 ]
 
 function Projects(props) {
