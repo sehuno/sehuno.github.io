@@ -9,6 +9,7 @@ import Pulse from 'react-reveal/Pulse';
 import { BsArrowReturnRight } from 'react-icons/bs';
 import { dreamsText, justiceText, perspectiveText } from './text.js';
 import { Document, Page, pdfjs } from 'react-pdf';
+import RingLoader from "react-spinners/RingLoader";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import hw1_spec from './hw1_spec.pdf'
 
@@ -329,13 +330,21 @@ function Project(props) {
           style={projectModalStyles}
         >
           <div style={{width:"100%", height:"100%"}}>
-            <Document file={hw1_spec}>
-              <Page style={{width:"100%", height:"100%"}} pageNumber={1} renderTextLayer={false} renderAnnotationLayer={false}/>
+            <Document file={hw1_spec} loading={<Loader/>}>
+              <Page pageNumber={1} renderTextLayer={false} renderAnnotationLayer={false}/>
             </Document>
           </div>
         </Modal>
       </div>
     </Fade>
+  )
+}
+
+function Loader() {
+  return(
+    <div style={{width:"100%", height:"100%", marginLeft:"450px", marginTop:"500px"}}>
+      <RingLoader loading color="#000" size={60} />
+    </div>
   )
 }
 
