@@ -239,15 +239,15 @@ function Photo() {
 }
 
 const projectsList = [
-  { id: 1, title:"Audeo", language:"Python", url: "https://github.com/sehuno/Audeo", excerpt:"A python webscraping and web automation script that downloads a desired song and finds all related attributes such as album name, album artwork, and lyrics in order to create a complete mp3 file."},
-  { id: 2, title: "ROTD", language:"Python", url:"https://github.com/sehuno/ROTD", excerpt:"ROTD is a python script which provides a recap of the day by web scraping various websites."},
-  { id: 3, title:"Context Free Grammar Matching", language:"OCaml", url:"https://github.com/sehuno/CS131/blob/master/hw/hw1/hw1_spec.pdf", excerpt:"A matcher function that inspects a given string of terminals to find a match for a prefix that corresponds to a nonterminal symbol of a grammar, and then checks whether the match is acceptable by testing whether a given acceptor succeeds on the corresponding derivation and suffix."},
-  { id: 4, title:"Edison Embedded Device", language:"C", url:"https://github.com/sehuno/CS111/blob/master/projects/lab4/lab4.pdf", excerpt:"Intel Edison embedded device application that supports the use of a sensor to gather data and acts as a client using a predefined network protocol to interact with a remove server program." },
-  { id: 5, title: "Grammar Filters", language:"OCaml", url:"https://github.com/sehuno/CS131/blob/master/hw/hw2/hw2.ml", excerpt:"Grammar filter function that filters out blind-alleys rules, that is, grammar rules for which it is impossible to derive a string of terminal symbols."},
-  { id: 6, title:"Java Synchronization", language:"Java", url:"https://github.com/sehuno/CS131/blob/master/hw/hw3/hw3_spec.pdf", excerpt:"A Java sequential-consistency-violating performance and reliability testing program that tests Null and Synchronized classes, using various values for the number of threads, number of swap transitions, size of the state array, and sum of the values in the state array, and characterizes the performance of the two classes. "},
-  { id: 7, title: "Listdiffs", language:"Scheme", url:"https://github.com/sehuno/CS131/blob/master/hw/hw5/hw5_spec.pdf", excerpt:"Various Scheme procedures that act upon listdiffs, which are intended to be efficient representations for sublists."},
-  { id: 8, title:"Morse Code Recovery", language:"Prolog", url:"https://github.com/sehuno/CS131/blob/master/hw/hw4/hw4_spec.pdf", excerpt:"Morse code recovery Prolog predicates that converts a list of 1s and 0s to the corresponding Morse characters and list of letters, interpreted according to the following Morse code table."},
-  { id: 9, title:"Twisted Proxy Herd", language:"Python", url:"https://github.com/sehuno/CS131/blob/master/hw/project/project_spec.pdf", excerpt:"A python server herd application utilizing Twisted, an event-driven networking framework, which accepts TCP connections that emulate client mobile devices in order to serve location information."},
+  { id: 1, title:"Audeo", language:"Python", numPages:3, url: "https://github.com/sehuno/Audeo", excerpt:"A python webscraping and web automation script that downloads a desired song and finds all related attributes such as album name, album artwork, and lyrics in order to create a complete mp3 file."},
+  { id: 2, title: "ROTD", language:"Python", numPages:3,url:"https://github.com/sehuno/ROTD", excerpt:"ROTD is a python script which provides a recap of the day by web scraping various websites."},
+  { id: 3, title:"Context Free Grammar Matching", numPages:3, language:"OCaml", url:"https://github.com/sehuno/CS131/blob/master/hw/hw1/hw1_spec.pdf", excerpt:"A matcher function that inspects a given string of terminals to find a match for a prefix that corresponds to a nonterminal symbol of a grammar, and then checks whether the match is acceptable by testing whether a given acceptor succeeds on the corresponding derivation and suffix."},
+  { id: 4, title:"Edison Embedded Device", language:"C",numPages:3, url:"https://github.com/sehuno/CS111/blob/master/projects/lab4/lab4.pdf", excerpt:"Intel Edison embedded device application that supports the use of a sensor to gather data and acts as a client using a predefined network protocol to interact with a remove server program." },
+  { id: 5, title: "Grammar Filters", language:"OCaml", numPages:3,url:"https://github.com/sehuno/CS131/blob/master/hw/hw2/hw2.ml", excerpt:"Grammar filter function that filters out blind-alleys rules, that is, grammar rules for which it is impossible to derive a string of terminal symbols."},
+  { id: 6, title:"Java Synchronization", language:"Java",numPages:3, url:"https://github.com/sehuno/CS131/blob/master/hw/hw3/hw3_spec.pdf", excerpt:"A Java sequential-consistency-violating performance and reliability testing program that tests Null and Synchronized classes, using various values for the number of threads, number of swap transitions, size of the state array, and sum of the values in the state array, and characterizes the performance of the two classes. "},
+  { id: 7, title: "Listdiffs", language:"Scheme", numPages:3,url:"https://github.com/sehuno/CS131/blob/master/hw/hw5/hw5_spec.pdf", excerpt:"Various Scheme procedures that act upon listdiffs, which are intended to be efficient representations for sublists."},
+  { id: 8, title:"Morse Code Recovery", language:"Prolog",numPages:3, url:"https://github.com/sehuno/CS131/blob/master/hw/hw4/hw4_spec.pdf", excerpt:"Morse code recovery Prolog predicates that converts a list of 1s and 0s to the corresponding Morse characters and list of letters, interpreted according to the following Morse code table."},
+  { id: 9, title:"Twisted Proxy Herd", language:"Python", numPages:3,url:"https://github.com/sehuno/CS131/blob/master/hw/project/project_spec.pdf", excerpt:"A python server herd application utilizing Twisted, an event-driven networking framework, which accepts TCP connections that emulate client mobile devices in order to serve location information."},
 ]
 
 function Projects(props) {
@@ -285,6 +285,8 @@ const projectModalStyles = {
 
 function Project(props) {
   const [modalOpen, setModalOpen] = useState(false)
+
+  const [numPages, setNumPages] = useState(null)
 
   const handleChildElementClick = (e) => {
     e.stopPropagation()
@@ -331,7 +333,9 @@ function Project(props) {
         >
           <div style={{width:"100%", height:"100%"}}>
             <Document file={hw1_spec} loading={<Loader/>}>
-              <Page pageNumber={1} renderTextLayer={false} renderAnnotationLayer={false}/>
+              {Array.apply(null, Array(props.project.numPages))
+                  .map((x, i)=>i+1)
+                  .map(page => <Page pageNumber={page} renderTextLayer={false} renderAnnotationLayer={false}/>)}
             </Document>
           </div>
         </Modal>
