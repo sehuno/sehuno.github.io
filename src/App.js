@@ -9,6 +9,7 @@ import Pulse from 'react-reveal/Pulse';
 import { BsArrowReturnRight } from 'react-icons/bs';
 import { dreamsText, justiceText, perspectiveText } from './text.js';
 import { Document, Page, pdfjs } from 'react-pdf';
+import "react-pdf/dist/esm/Page/TextLayer.css";
 import hw1_spec from './hw1_spec.pdf'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -329,7 +330,7 @@ function Project(props) {
         >
           <div style={{width:"100%", height:"100%"}}>
             <Document file={hw1_spec}>
-              <Page pageNumber={1}/>
+              <Page style={{width:"100%", height:"100%"}} pageNumber={1} renderTextLayer={false} renderAnnotationLayer={false}/>
             </Document>
           </div>
         </Modal>
