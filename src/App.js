@@ -29,12 +29,13 @@ function App() {
   return (
     <div className="App" style={{position:"absolute",width:"100vw", height:"100vh"}}>
       <AnimatePresence>
-        { !isOpen && <motion.div
-          style={{borderRadius: "50%",width:"100px", height:"100px", left:"47%",top:"47%", backgroundColor:"white",zIndex:"1", position:"absolute"}}
+        { !isOpen && <div
+          style={{position:"absolute", zIndex:"10", fontSize:"450px", marginLeft:"740px", marginTop:"200px", color:"white" }}
           onClick={() => setIsOpen(!isOpen)}
-          exit={{ opacity: 0 }}
+          exit={{opacity:0}}
           >
-          </motion.div>
+            ᴔ
+          </div>
         }
       </AnimatePresence>
       <div style={{position:"absolute",display:"flex", flexDirection:"column", width:"100%", height:"100%"}}>
