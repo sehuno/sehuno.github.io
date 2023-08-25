@@ -60,13 +60,6 @@ function App() {
   );
 }
 
-const menuList = [
-  { id: 1, title:"About Me"},
-  { id: 2, title:"Blog"},
-  { id: 3, title:"Projects"},
-  { id: 4, title:"Photography"},
-]
-
 const photoModalStyles = {
   content: {
     top: '50%',
