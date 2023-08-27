@@ -11,6 +11,8 @@ import { dreamsText, justiceText, perspectiveText } from './text.js';
 import { Document, Page, pdfjs } from 'react-pdf';
 import RingLoader from "react-spinners/RingLoader";
 import "react-pdf/dist/esm/Page/TextLayer.css";
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import hw1_spec from './hw1_spec.pdf';
 import hw2_spec from './hw2_spec.pdf';
 import hw3_spec from './hw3_spec.pdf';
@@ -370,6 +372,7 @@ const textItems = [
   {id: 8, text:"i n f j"}
 ]
 
+
 function AboutMe(props) {
   return(
     <div style={{position:"absolute", width:"100vw", height:"100vh"}}
@@ -391,8 +394,14 @@ function AboutMe(props) {
               </div>
             </Zoom>
             <Fade left delay={3000}>
-              <div style={{width:"60%", height:"10%", margin:"auto"}}>
-                i n f j
+              <div style={{width:"100%", height:"10%", margin:"auto"}}>
+                <Carousel autoPlay={true} axis={'vertical'} infiniteLoop={true} showArrows={false} showIndicators={false} showThumbs={false} showStatus={false} dynamicHeight={true}>
+                  {textItems.map((textItem) => {
+                    return (
+                      <div>{textItem.text}</div>
+                    );
+                  })}
+                </Carousel>
               </div>
             </Fade>
             <Fade bottom delay={3500}><div style={{fontSize:"18px", width:"80%", height:"35%", margin:"auto"}}>Hello! My name is Sehun, pronounced say-hoon, eric oh, a college student currently studying computer science. In my free time, I enjoy coding, taking photos, dancing, and browsing the endless stream of cat photos, otherwise known as the internet. </div></Fade>
@@ -430,6 +439,16 @@ function AboutMe(props) {
     </div>
   )
 }
+
+// <div style={{width:"60%", height:"10%", margin:"auto"}}>
+//   i n f j
+// </div>
+
+// {textItems.map((textItem) => {
+//   return (
+//     <div>{textItem.text}</div>
+//   );
+// })}
 
 const blogPosts = [
   {id: 1, title:"Dreams", text: dreamsText, date:"08.22.2023", img:"https://www.pixel4k.com/wp-content/uploads/2018/03/Equinox%20Sun%20Moon%20Dream%204K5032219249.jpg"},
