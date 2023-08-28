@@ -148,7 +148,7 @@ function Menu() {
   return(
     <div style={{width:"100%", height:"100%"}}>
       <div
-        style={{position:"absolute", width:"30rem",height:"25rem", margin:"auto", left:"40%", top:"10%"}}
+        style={{position:"absolute", width:"30rem",height:"25rem", margin:"auto", left:"40%", top:"10%", fontFamily:"Ageo"}}
       >
         <AnimatePresence>
           { aboutMeOpen &&
@@ -159,7 +159,7 @@ function Menu() {
               onClick={aboutMe}
               exit={{ opacity: 0 }}
             >
-              <p style={{fontSize:"4.5rem"}}>About Me</p>
+              <p style={{fontSize:"4.5rem"}}>about me</p>
             </motion.div>
           }
         </AnimatePresence>
@@ -172,7 +172,7 @@ function Menu() {
               onClick={blog}
               exit={{ opacity: 0 }}
             >
-              <p style={{fontSize:"4.5rem"}}>Blog</p>
+              <p style={{fontSize:"4.5rem"}}>blog</p>
             </motion.div>
           }
         </AnimatePresence>
@@ -185,7 +185,7 @@ function Menu() {
               onClick={projects}
               exit={{ opacity: 0 }}
             >
-              <p style={{fontSize:"4.5rem"}}>Projects</p>
+              <p style={{fontSize:"4.5rem"}}>projects</p>
             </motion.div>
           }
         </AnimatePresence>
@@ -198,7 +198,7 @@ function Menu() {
               exit={{ opacity: 0 }}
               onClick={photographyClicked}
             >
-              <p style={{fontSize:"4.5rem"}}>Photography</p>
+              <p style={{fontSize:"4.5rem"}}>photography</p>
             </motion.div>
           }
         </AnimatePresence>

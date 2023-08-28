@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+ font-family: "Ageo";
+ src: local("Ageo"),
+  url("./fonts/ageo/Ageo.otf") format("truetype");
+ font-weight: bold;
+}
