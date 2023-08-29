@@ -30,3 +30,16 @@ code {
  src: local("Strasse"),
   url("./fonts/strasse/Strasse.ttf") format("truetype");
 }
+
+@font-face {
+ font-family: "PlayfairDisplay";
+ src: local("PlayfairDisplay"),
+  url("./fonts/playfairdisplay/PlayfairDisplay.ttf") format("truetype");
+}
+
+
+@font-face {
+ font-family: "Azonix";
+ src: local("Azonix"),
+  url("./fonts/azonix/Azonix.otf") format("truetype");
+}

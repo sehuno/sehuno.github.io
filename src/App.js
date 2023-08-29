@@ -506,7 +506,7 @@ function BlogPost(props) {
           </div>
           <div style={{width:"50%", height:"100%", display:"flex", flexDirection:"column"}}>
             <div style={{width:"100%", height:"85%", fontSize:"55px", textAlign:"center", paddingTop:"70px", fontFamily:"August"}}>{props.blogPost.title}</div>
-            <div onClick={(e) => handleChildElementClick(e)} style={{width:"100%", height:"15%", marginLeft:"85px", paddingBottom:"15px"}}><BsArrowReturnRight />See More</div>
+            <div onClick={(e) => handleChildElementClick(e)} style={{width:"100%", height:"15%", marginLeft:"60px", paddingBottom:"10px",fontSize:"16px", fontFamily:"Azonix"}}><BsArrowReturnRight />See More</div>
           </div>
         </div>
       </div>
@@ -527,7 +527,7 @@ function BlogPost(props) {
                   <Fade left><div style={{fontSize:"48px", marginRight:"10px", fontFamily:"August"}}>{props.blogPost.title}</div></Fade>
                   <Fade top><div style={{fontSize:"24px", fontFamily:"Strasse"}}>{props.blogPost.date}</div></Fade>
                 </div>
-                <Fade bottom><div className="blog-text" style={{width:"100%", height:"90%", fontSize:"18px", overflow:"scroll", marginTop:"40px"}}>{props.blogPost.text}</div></Fade>
+                <Fade bottom><div className="blog-text" style={{width:"100%", height:"90%", fontSize:"18px", overflow:"scroll", marginTop:"40px", fontFamily:"PlayfairDisplay"}}>{props.blogPost.text}</div></Fade>
               </div>
             </div>
           </div>

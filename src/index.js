@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import './fonts/ageo/Ageo.otf';
 import './fonts/august/August-Bold.ttf';
 import './fonts/strasse/Strasse.ttf'
+import './fonts/playfairdisplay/PlayfairDisplay.ttf'
+import './fonts/azonix/Azonix.otf';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
