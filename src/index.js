@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './fonts/ageo/Ageo.otf';
+import './fonts/august/August-Bold.ttf';
+import './fonts/strasse/Strasse.ttf'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

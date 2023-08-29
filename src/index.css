@@ -18,3 +18,15 @@ code {
   url("./fonts/ageo/Ageo.otf") format("truetype");
  font-weight: bold;
 }
+
+@font-face {
+ font-family: "August";
+ src: local("August-Bold"),
+  url("./fonts/august/August-Bold.ttf") format("truetype");
+}
+
+@font-face {
+ font-family: "Strasse";
+ src: local("Strasse"),
+  url("./fonts/strasse/Strasse.ttf") format("truetype");
+}

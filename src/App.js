@@ -505,7 +505,7 @@ function BlogPost(props) {
             <img style={{height:"100%", position:"absolute", left:"-52%"}} src={props.blogPost.img}/>
           </div>
           <div style={{width:"50%", height:"100%", display:"flex", flexDirection:"column"}}>
-            <div style={{width:"100%", height:"85%", fontSize:"30px", textAlign:"center", paddingTop:"70px"}}>{props.blogPost.title}</div>
+            <div style={{width:"100%", height:"85%", fontSize:"55px", textAlign:"center", paddingTop:"70px", fontFamily:"August"}}>{props.blogPost.title}</div>
             <div onClick={(e) => handleChildElementClick(e)} style={{width:"100%", height:"15%", marginLeft:"85px", paddingBottom:"15px"}}><BsArrowReturnRight />See More</div>
           </div>
         </div>
@@ -524,8 +524,8 @@ function BlogPost(props) {
             <div style={{width:"90%", height:"80%", margin:"auto", marginTop:"70px", borderTop:"5px solid lightgrey", borderBottom:"5px solid lightgrey"}}>
               <div style={{width:"85%", height:"85%", margin:"auto", marginTop:"60px", display:"flex", flexDirection:"column"}}>
                 <div style={{width:"100%", height:"10%", display:"flex", flexDirection:"row", borderBottom:"5px solid lightgrey"}}>
-                  <Fade left><div style={{fontSize:"48px", marginRight:"10px"}}>{props.blogPost.title}</div></Fade>
-                  <Fade top><div style={{fontSize:"24px"}}>{props.blogPost.date}</div></Fade>
+                  <Fade left><div style={{fontSize:"48px", marginRight:"10px", fontFamily:"August"}}>{props.blogPost.title}</div></Fade>
+                  <Fade top><div style={{fontSize:"24px", fontFamily:"Strasse"}}>{props.blogPost.date}</div></Fade>
                 </div>
                 <Fade bottom><div className="blog-text" style={{width:"100%", height:"90%", fontSize:"18px", overflow:"scroll", marginTop:"40px"}}>{props.blogPost.text}</div></Fade>
               </div>
