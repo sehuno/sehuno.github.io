@@ -326,7 +326,7 @@ function Project(props) {
           <div style={{width:"100%", height:"75%", backgroundColor:"#808080"}}
             onClick={(e) => handleChildElementClick(e)}
           >
-            <p style={{fontSize:"24px", padding:"20px", color:"white"}}>{props.project.excerpt}</p>
+            <p style={{fontSize:"24px", padding:"20px", color:"white", fontFamily:"Zilla Slab"}}>{props.project.excerpt}</p>
           </div>
         </div>
         <Modal

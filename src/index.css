@@ -49,3 +49,10 @@ code {
  src: local("Leyton"),
   url("./fonts/leyton/Leyton-Bold.otf") format("truetype");
 }
+
+
+@font-face {
+ font-family: "Zilla Slab";
+ src: local("Zilla Slab"),
+  url("./fonts/zillaslab/ZillaSlab-Regular.ttf") format("truetype");
+}
