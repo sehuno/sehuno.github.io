@@ -8,6 +8,7 @@ import './fonts/august/August-Bold.ttf';
 import './fonts/strasse/Strasse.ttf'
 import './fonts/playfairdisplay/PlayfairDisplay.ttf'
 import './fonts/azonix/Azonix.otf';
+import './fonts/leyton/Leyton-Bold.otf';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

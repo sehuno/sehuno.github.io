@@ -43,3 +43,9 @@ code {
  src: local("Azonix"),
   url("./fonts/azonix/Azonix.otf") format("truetype");
 }
+
+@font-face {
+ font-family: "Leyton";
+ src: local("Leyton"),
+  url("./fonts/leyton/Leyton-Bold.otf") format("truetype");
+}

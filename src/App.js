@@ -307,7 +307,7 @@ function Project(props) {
             <div style={{display:"flex", width:"70%", height:"100%", backgroundColor:"#c8c9ac"}}
               onClick={(e) => handleChildElementClick(e)}
             >
-              <p style={{fontSize:"36px", position:"absolute", marginTop:"10px", marginLeft:"10px", color:"#787867"}}>{props.project.title}</p>
+              <p style={{fontSize:"36px", position:"absolute", marginTop:"10px", marginLeft:"10px", color:"white", fontFamily:"Leyton"}}>{props.project.title}</p>
             </div>
             <div style={{display:"flex", width:"20%", height:"100%", backgroundColor:"#E0E0E0"}}>
               <div style={{position:"relative", margin:"auto", padding:"10px", borderRadius:"20px"}}>
