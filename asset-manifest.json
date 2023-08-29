@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.2e8207e1.css",
-    "main.js": "/static/js/main.35bf087d.js",
+    "main.css": "/static/css/main.a71f50b5.css",
+    "main.js": "/static/js/main.0b863d2e.js",
     "static/js/787.c66d5fd9.chunk.js": "/static/js/787.c66d5fd9.chunk.js",
+    "static/media/PlayfairDisplay.ttf": "/static/media/PlayfairDisplay.596ac7ea3470746ed4c5.ttf",
+    "static/media/ZillaSlab-Regular.ttf": "/static/media/ZillaSlab-Regular.6811eaab24ca95146dc8.ttf",
     "static/media/lab4.pdf": "/static/media/lab4.82b573f015cc21906493.pdf",
     "static/media/hw2_spec.pdf": "/static/media/hw2_spec.8245f2e78d175a7892e8.pdf",
     "static/media/hw1_spec.pdf": "/static/media/hw1_spec.6a6ed250505cd9417874.pdf",
@@ -12,13 +14,18 @@
     "static/media/hw4_spec.pdf": "/static/media/hw4_spec.f7d64f90cbce2b2a6b5c.pdf",
     "static/media/hw5_spec.pdf": "/static/media/hw5_spec.e99ec5ae15a9870f02f1.pdf",
     "static/media/rotd.pdf": "/static/media/rotd.6d94e41653c3bb518373.pdf",
+    "static/media/Strasse.ttf": "/static/media/Strasse.7e5de43fe853e09a26f7.ttf",
+    "static/media/August-Bold.ttf": "/static/media/August-Bold.3b92daf35f39db9d09d2.ttf",
+    "static/media/Leyton-Bold.otf": "/static/media/Leyton-Bold.cb5524a5410c7dfa54dc.otf",
+    "static/media/Ageo.otf": "/static/media/Ageo.300c1e75d1ae0585168a.otf",
+    "static/media/Azonix.otf": "/static/media/Azonix.9091792cb1720a8c6ea0.otf",
     "index.html": "/index.html",
-    "main.2e8207e1.css.map": "/static/css/main.2e8207e1.css.map",
-    "main.35bf087d.js.map": "/static/js/main.35bf087d.js.map",
+    "main.a71f50b5.css.map": "/static/css/main.a71f50b5.css.map",
+    "main.0b863d2e.js.map": "/static/js/main.0b863d2e.js.map",
     "787.c66d5fd9.chunk.js.map": "/static/js/787.c66d5fd9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e8207e1.css",
-    "static/js/main.35bf087d.js"
+    "static/css/main.a71f50b5.css",
+    "static/js/main.0b863d2e.js"
   ]
 }
